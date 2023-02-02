@@ -1,0 +1,88 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 50px;
+  border-top: 1px solid rgba(62, 67, 74, 1);
+  background-color: rgba(52, 57, 64, 1);
+}
+
+.logo {
+  position: relative;
+  top: -25px;
+
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  &:hover {
+    .btnIcon {
+      color: var(--blue);
+    }
+  }
+}
+
+.btnIcon {
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 50px;
+  min-height: 40px;
+
+  background-color: rgb(44, 48, 57);
+
+  text-align: center;
+  font-size: 12px;
+  color: var(--light);
+
+  .privacyBtn {
+    color: var(--blue);
+  }
+}
+
+.link {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    display: block;
+  }
+  .nav {
+    display: block;
+  }
+  .btn {
+    margin: 20px 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  .copyright {
+    flex-direction: column;
+    padding: 10px 20px;
+
+    p:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}

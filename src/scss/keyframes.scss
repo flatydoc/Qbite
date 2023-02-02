@@ -1,0 +1,26 @@
+@keyframes glitch-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage(calc($i*(1/$steps)))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+
+@keyframes glitch-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage(calc($i*(1/$steps)))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}

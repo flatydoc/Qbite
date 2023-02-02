@@ -1,0 +1,97 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.content {
+  width: 600px;
+  height: 600px;
+
+  display: grid;
+  grid-template-areas:
+    "development context"
+    "seo target"
+    "contacts contacts";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  .link {
+    display: flex;
+    align-items: flex-end;
+
+    color: #fff;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: grayscale(100%);
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(105%);
+
+      filter: grayscale(0);
+    }
+  }
+
+  .title {
+    padding: 15px;
+  }
+
+  .development {
+    grid-area: development;
+    background-image: url(../../assets/images/modal_development.jpg);
+  }
+  .context {
+    grid-area: context;
+    background-image: url(../../assets//images/context.jpg);
+  }
+  .seo {
+    grid-area: seo;
+    background-image: url(../../assets//images/seo.jpg);
+  }
+  .target {
+    grid-area: target;
+    background-image: url(../../assets/images/target.jpg);
+  }
+
+  .contacts {
+    grid-area: contacts;
+    background-image: url(../../assets/images/contacts.jpg);
+    background-position-y: 65%;
+  }
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .link {
+    margin: 20px 20px;
+    height: 200px;
+  }
+}
