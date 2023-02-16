@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Quantum/static/css/main.e674c0da.css",
-    "main.js": "/Quantum/static/js/main.91cf007e.js",
+    "main.css": "/Quantum/static/css/main.961adc10.css",
+    "main.js": "/Quantum/static/js/main.7736a9d5.js",
     "static/media/stages.jpg": "/Quantum/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/target.jpg": "/Quantum/static/media/target.e016a577a409378b0332.jpg",
     "static/media/context.jpg": "/Quantum/static/media/context.0444c89279902d75cd7a.jpg",
@@ -9,6 +9,7 @@
     "static/media/seo.jpg": "/Quantum/static/media/seo.7c1034e18702fd1d9830.jpg",
     "static/media/contacts.jpg": "/Quantum/static/media/contacts.552be0cf56664119e25c.jpg",
     "static/media/development.jpg": "/Quantum/static/media/development.225e2a353cffa332be8a.jpg",
+    "static/media/form.jpg": "/Quantum/static/media/form.ce2bebec6b122cca89b9.jpg",
     "static/media/primeicons.svg": "/Quantum/static/media/primeicons.e1441b135b3ca9ad643c.svg",
     "static/media/main.jpg": "/Quantum/static/media/main.b86a9ab9d37a8f490617.jpg",
     "static/media/context_main.webp": "/Quantum/static/media/context_main.9b5a5aa4bfe5fe54ab3e.webp",
@@ -17,7 +18,7 @@
     "static/media/primeicons.eot": "/Quantum/static/media/primeicons.d44157bdfa026dc877af.eot",
     "static/media/primeicons.woff": "/Quantum/static/media/primeicons.10d3152104f2208ac82a.woff",
     "static/media/primeicons.ttf": "/Quantum/static/media/primeicons.ea5358601d0a3fd6670b.ttf",
-    "static/media/about.jpg": "/Quantum/static/media/about.06ecb0e97f6c2bb67106.jpg",
+    "static/media/faq.jpg": "/Quantum/static/media/faq.06ecb0e97f6c2bb67106.jpg",
     "static/media/graph.png": "/Quantum/static/media/graph.0daa9aa0710002c76850.png",
     "static/media/primeicons.woff2": "/Quantum/static/media/primeicons.78172950b335ccdb94e2.woff2",
     "static/media/handshake.png": "/Quantum/static/media/handshake.e9a47fb9d092bad1b3e5.png",
@@ -28,11 +29,11 @@
     "static/media/slick.ttf": "/Quantum/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Quantum/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Quantum/index.html",
-    "main.e674c0da.css.map": "/Quantum/static/css/main.e674c0da.css.map",
-    "main.91cf007e.js.map": "/Quantum/static/js/main.91cf007e.js.map"
+    "main.961adc10.css.map": "/Quantum/static/css/main.961adc10.css.map",
+    "main.7736a9d5.js.map": "/Quantum/static/js/main.7736a9d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.e674c0da.css",
-    "static/js/main.91cf007e.js"
+    "static/css/main.961adc10.css",
+    "static/js/main.7736a9d5.js"
   ]
 }
