@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Quantum/static/css/main.c8db4bc4.css",
-    "main.js": "/Quantum/static/js/main.38a01901.js",
+    "main.css": "/Quantum/static/css/main.e674c0da.css",
+    "main.js": "/Quantum/static/js/main.91cf007e.js",
     "static/media/stages.jpg": "/Quantum/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/target.jpg": "/Quantum/static/media/target.e016a577a409378b0332.jpg",
     "static/media/context.jpg": "/Quantum/static/media/context.0444c89279902d75cd7a.jpg",
@@ -11,6 +11,7 @@
     "static/media/development.jpg": "/Quantum/static/media/development.225e2a353cffa332be8a.jpg",
     "static/media/primeicons.svg": "/Quantum/static/media/primeicons.e1441b135b3ca9ad643c.svg",
     "static/media/main.jpg": "/Quantum/static/media/main.b86a9ab9d37a8f490617.jpg",
+    "static/media/context_main.webp": "/Quantum/static/media/context_main.9b5a5aa4bfe5fe54ab3e.webp",
     "static/media/development_main.jpg": "/Quantum/static/media/development_main.f3ccb1afe609f4b95519.jpg",
     "static/media/advice.jpg": "/Quantum/static/media/advice.f36d5cc500f505e5eb3e.jpg",
     "static/media/primeicons.eot": "/Quantum/static/media/primeicons.d44157bdfa026dc877af.eot",
@@ -27,11 +28,11 @@
     "static/media/slick.ttf": "/Quantum/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Quantum/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Quantum/index.html",
-    "main.c8db4bc4.css.map": "/Quantum/static/css/main.c8db4bc4.css.map",
-    "main.38a01901.js.map": "/Quantum/static/js/main.38a01901.js.map"
+    "main.e674c0da.css.map": "/Quantum/static/css/main.e674c0da.css.map",
+    "main.91cf007e.js.map": "/Quantum/static/js/main.91cf007e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8db4bc4.css",
-    "static/js/main.38a01901.js"
+    "static/css/main.e674c0da.css",
+    "static/js/main.91cf007e.js"
   ]
 }
