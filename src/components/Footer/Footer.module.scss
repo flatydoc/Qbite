@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 50px;
+
   padding: 0 50px;
+  min-height: 50px;
+
   border-top: 1px solid rgba(62, 67, 74, 1);
   background-color: rgba(52, 57, 64, 1);
 }
@@ -17,22 +19,6 @@
 
 .nav {
   display: flex;
-}
-
-.btn {
-  width: 30px;
-  height: 30px;
-  &:hover {
-    .btnIcon {
-      color: var(--blue);
-    }
-  }
-}
-
-.btnIcon {
-  height: 100%;
-
-  transform: rotate(-90deg);
 }
 
 .copyright {
@@ -64,11 +50,6 @@
   }
   .nav {
     display: block;
-  }
-  .btn {
-    margin: 20px 0;
-    width: 40px;
-    height: 40px;
   }
 }
 

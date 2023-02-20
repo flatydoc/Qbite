@@ -1,0 +1,193 @@
+@import "../../../scss/keyframes.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 100px;
+  height: calc(100vh - 100px);
+
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../../../assets/images/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.title {
+  font-size: 50px;
+  color: var(--pink);
+}
+
+.subtitle {
+  margin-bottom: 10px;
+
+  color: var(--light);
+  font-size: 25px;
+}
+
+.btnWrapper {
+  display: flex;
+
+  margin: 50px 0 100px 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+
+  margin-left: 35px;
+  height: 40px;
+  padding: 10px 0;
+
+  .btnIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    .btnIcon {
+      color: var(--blue);
+
+      animation: bounce 2s infinite ease;
+    }
+    .btnText {
+      color: #fff;
+    }
+  }
+}
+
+.btnText {
+  color: var(--light);
+  font-size: 15px;
+}
+
+.btnIcon {
+  margin-left: 15px;
+  height: 30px;
+}
+
+.glitch {
+  position: relative;
+
+  align-self: flex-end;
+  padding-right: 10px;
+
+  font-family: Orbitron, sans-serif;
+  color: white;
+  font-size: 30px;
+
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    top: 0;
+    overflow: hidden;
+
+    background: black;
+
+    color: white;
+    text-shadow: 1px 0 blue;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+  &:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    overflow: hidden;
+
+    background: black;
+
+    color: white;
+    text-shadow: -1px 0 red;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 25px 50px;
+  }
+}
+
+@media (max-height: 576px) {
+  .glitch {
+    display: none;
+  }
+  .main {
+    padding: 25px 50px;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btnWrapper {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    margin-bottom: 10px;
+
+    font-size: 15px;
+  }
+  .btn {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .btnText {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .btnIcon {
+    margin-left: 15px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .main {
+    padding: 25px 20px;
+  }
+  .btnWrapper {
+    margin: 50px 0 70px 0;
+  }
+  .btn {
+    justify-content: center;
+  }
+}
+
+@media (max-height: 360px) {
+  .main {
+    height: calc(100vh - 70px);
+  }
+
+  .subtitle {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .btnWrapper {
+    margin: 20px 0 0 0;
+  }
+}

@@ -2,6 +2,7 @@
   "name": "quantum",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://flatydoc.github.io/Quantum",
   "dependencies": {
     "@react-hook/mouse-position": "^4.1.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -9,10 +10,17 @@
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.2",
     "framer-motion": "^8.5.3",
+    "gh-pages": "^5.0.0",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.0.0-rc.1",
     "react": "^18.2.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-circular-menu": "^2.3.10",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.1",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
+    "react-scroll-to-top": "^3.0.0",
     "react-slick": "^0.29.0",
     "sass": "^1.57.1",
     "slick-carousel": "^1.8.1",
@@ -23,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,179 @@
+.stages {
+  padding: 50px 100px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4) inset;
+  background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 1) 0%,
+      rgba(32, 35, 41, 0.8) 100%
+    ),
+    url(../../assets/images/stages.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.title {
+  position: relative;
+
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background-color: var(--blue);
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin: 50px 0;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: 2px;
+  height: 100%;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.progress {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 4px;
+  background-color: var(--pink);
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 6px;
+    height: 6px;
+    content: "";
+    background-color: var(--pink);
+    border-radius: 50%;
+  }
+}
+
+.stage {
+  margin: 20px 0;
+  display: flex;
+  gap: 72px;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.stage:nth-child(odd) {
+  .subtitle {
+    justify-content: end;
+    text-align: end;
+  }
+}
+
+.subtitle {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 320px;
+  max-width: 320px;
+
+  font-size: 40px;
+  color: var(--blue);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+  min-width: 320px;
+  max-width: 320px;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .stages {
+    padding: 25px 25px 50px 25px;
+  }
+  .card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+  .subtitle {
+    min-width: 280px;
+    max-width: 280px;
+
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stage {
+    gap: 42px;
+  }
+
+  .card {
+    min-width: 220px;
+    max-width: 220px;
+  }
+  .subtitle {
+    min-width: 220px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .line {
+    display: none;
+  }
+  .stage {
+    display: block;
+    margin: 20px 0;
+  }
+  .stage:nth-child(odd) {
+    .subtitle {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .card {
+    margin-top: 15px;
+
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .subtitle {
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}

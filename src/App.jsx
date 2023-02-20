@@ -1,21 +1,23 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { FormContext } from "./core/context/FormContext";
+
 import { Layout } from "./views/Layout/Layout";
 import { ErrorPage } from "./views/ErrorPage/ErrorPage";
+
 import { HomePage } from "./pages/HomePage/HomePage";
 import { ContactsPage } from "./pages/ContactsPage/ContactsPage";
 import { DevelopmentPage } from "./pages/DevelopmentPage/DevelopmentPage";
 import { ContextPage } from "./pages/ContextPage/ContextPage";
 import { SeoPage } from "./pages/SeoPage/SeoPage";
 import { TargetPage } from "./pages/TargetPage/TargetPage";
-import styles from "./App.module.scss";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
 
 export const App = () => {
   return (
     <FormContext.Provider>
-      <BrowserRouter>
-        <div className={styles.app}>
+      <HashRouter>
+        <>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<HomePage />} />
@@ -28,8 +30,8 @@ export const App = () => {
             </Route>
             <Route path="/*" element={<ErrorPage />} />
           </Routes>
-        </div>
-      </BrowserRouter>
+        </>
+      </HashRouter>
     </FormContext.Provider>
   );
 };

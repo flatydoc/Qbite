@@ -1,0 +1,29 @@
+.feedback {
+  padding: 50px 100px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--yellow);
+}
+
+.wrapper {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback {
+    padding: 25px;
+  }
+  .title {
+    text-align: center;
+    font-size: 30px;
+  }
+}

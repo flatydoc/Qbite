@@ -5,7 +5,7 @@ export const Modal = ({ active, setActive }) => {
   return (
     <div
       onClick={() => setActive(false)}
-      className={active ? `${styles.modal}  ${styles.active}` : styles.modal}
+      className={active ? `${styles.modal} ${styles.active}` : styles.modal}
     >
       <div className={styles.content}>
         <NavLink
@@ -14,7 +14,7 @@ export const Modal = ({ active, setActive }) => {
         >
           <h3 className={styles.title}>РАЗРАБОТКА</h3>
         </NavLink>
-        <NavLink to="context" className={`${styles.context} ${styles.link}`}>
+        <NavLink to="context" className={`${styles.context}  ${styles.link}`}>
           <h3 className={styles.title}>КОНТЕКСТНАЯ РЕКЛАМА</h3>
         </NavLink>
         <NavLink to="seo" className={`${styles.seo} ${styles.link}`}>

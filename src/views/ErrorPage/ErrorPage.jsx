@@ -38,7 +38,7 @@ export const ErrorPage = () => {
     btn: {
       x: mouseXPosition,
       y: mouseYPosition,
-      boxShadow: "none",
+      boxShadow: "0px 0px 80px 50px rgba(5, 217, 232, 0.4)",
       transition: {
         type: "spring",
         mass: 0.6,
@@ -52,13 +52,13 @@ export const ErrorPage = () => {
     damping: 28,
   };
 
-  //   const btnEnter = () => {
-  //     setCursorVariant("btn");
-  //   };
+  const btnEnter = () => {
+    setCursorVariant("btn");
+  };
 
-  //   const btnLeave = () => {
-  //     setCursorVariant("default");
-  //   };
+  const btnLeave = () => {
+    setCursorVariant("default");
+  };
 
   return (
     <div className={styles.errorPage} ref={ref}>
@@ -70,7 +70,9 @@ export const ErrorPage = () => {
           </span>
           Page not found
         </p>
-        <Button to={"/"} btnText={"НА ГЛАВНУЮ"} />
+        <div onMouseEnter={btnEnter} onMouseLeave={btnLeave}>
+          <Button to={"/"} btnText={"НА ГЛАВНУЮ"} />
+        </div>
       </div>
       <motion.div
         className={styles.cursor}

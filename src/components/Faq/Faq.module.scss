@@ -1,0 +1,107 @@
+@import "../../scss/keyframes.scss";
+
+.faq {
+  padding: 0 100px 50px 100px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4) inset;
+  background: linear-gradient(
+      180deg,
+      rgba(32, 35, 41, 1) 0%,
+      rgba(32, 35, 41, 0.8) 100%
+    ),
+    url(../../assets/images/faq.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.title {
+  position: relative;
+  top: -25px;
+
+  text-align: right;
+
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--pink);
+}
+
+.accordion {
+  border: none;
+}
+
+.accordion__item {
+  margin: 20px 0;
+}
+
+.accordion__button {
+  padding: 18px;
+  width: 100%;
+
+  background-color: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset;
+
+  text-align: left;
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(101%);
+  }
+}
+
+.accordion__button:before {
+  content: "";
+  display: inline-block;
+
+  height: 10px;
+  width: 10px;
+  margin-right: 12px;
+  border-bottom: 2px solid var(--blue);
+  border-right: 2px solid var(--blue);
+  transition: all 0.2s ease-in;
+  transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded="true"]::before,
+.accordion__button[aria-selected="true"]::before {
+  transform: rotate(45deg);
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  padding: 20px;
+
+  color: var(--light);
+  font-size: 15px;
+  line-height: 20px;
+  text-shadow: 0px 0px 3px #000000;
+
+  animation: fadein 0.35s ease-in;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 0 50px 50px 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq {
+    padding: 0 25px 25px 25px;
+  }
+  .title {
+    top: -20px;
+
+    text-align: center;
+    font-size: 40px;
+  }
+}

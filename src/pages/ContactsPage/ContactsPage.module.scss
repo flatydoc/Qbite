@@ -1,0 +1,19 @@
+.contactsPage {
+  height: calc(100vh - 100px);
+
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(../../assets/images/form.jpg);
+
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-height: 360px) {
+  .contactsPage {
+    height: calc(100vh - 70px);
+  }
+}

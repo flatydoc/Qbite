@@ -6,105 +6,84 @@
 
   padding: 25px 100px;
   height: calc(100vh - 100px);
-
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
-    url(../../assets/images/main.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: center;
 }
 
 .title {
-  font-size: 50px;
-  color: var(--pink);
+  font-size: 40px;
+  color: #fff;
+}
+
+.pink {
+  padding: 0 10px;
+
+  line-height: 50px;
+  text-shadow: 0px 0px 3px #000000;
+
+  background-color: var(--pink);
 }
 
 .subtitle {
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
 
-  color: var(--light);
   font-size: 25px;
+  line-height: 25px;
+  color: var(--light);
 }
 
-.btnWrapper {
-  display: flex;
+.icon {
+  margin-left: 20px;
 
-  margin: 50px 0 100px 0;
+  color: var(--blue);
+  font-size: 30px;
+  animation: bounce 2s infinite ease;
 }
 
 .btn {
+  position: relative;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  margin-left: 35px;
+  margin: 20px 0;
+  width: 250px;
   height: 40px;
   padding: 10px 0;
+  border: 1px solid var(--blue);
 
-  &:hover {
-    .btnIcon {
-      color: var(--blue);
+  font-family: Play, sans-serif;
+  color: #fff;
 
-      animation: bounce 1s infinite ease;
-    }
-    .btnText {
-      color: #fff;
-    }
+  cursor: pointer;
+  clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, 10% 110%, -10% 40%);
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    height: 100%;
+    width: 10%;
+    background-color: var(--blue);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5) inset;
+
+    transition: width 0.3s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
   }
 }
 
 .btnText {
-  color: var(--light);
+  z-index: 1;
+
   font-size: 15px;
-}
-
-.btnIcon {
-  margin-left: 15px;
-  height: 30px;
-}
-
-.glitch {
-  position: relative;
-
-  align-self: flex-end;
-  padding-right: 10px;
-
-  font-family: Orbitron, sans-serif;
-  color: white;
-  font-size: 30px;
-
-  &:before {
-    content: attr(data-text);
-    position: absolute;
-    left: -2px;
-    top: 0;
-    overflow: hidden;
-
-    background: black;
-
-    color: white;
-    text-shadow: 1px 0 blue;
-    clip: rect(0, 900px, 0, 0);
-    animation: glitch-anim-2 3s infinite linear alternate-reverse;
-  }
-  &:after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    top: 0;
-    overflow: hidden;
-
-    background: black;
-
-    color: white;
-    text-shadow: -1px 0 red;
-    clip: rect(0, 900px, 0, 0);
-    animation: glitch-anim 2s infinite linear alternate-reverse;
-  }
+  text-shadow: 0px 0px 3px #000000;
 }
 
 @media (max-width: 768px) {
@@ -113,42 +92,47 @@
   }
 }
 
-@media (max-width: 576px) {
-  .btnWrapper {
-    flex-direction: column;
+@media (max-height: 576px) {
+  .main {
+    padding: 25px 50px;
   }
   .title {
     font-size: 30px;
   }
 
   .subtitle {
-    margin-bottom: 10px;
+    margin: 10px 0;
 
     font-size: 15px;
+    line-height: 20px;
   }
   .btn {
-    margin-top: 15px;
-    margin-left: 0;
-  }
-
-  .btnText {
-    font-size: 15px;
-    font-weight: 400;
-  }
-
-  .btnIcon {
-    margin-left: 15px;
-    height: 30px;
+    margin: 10px 0;
   }
 }
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 360px) {
   .main {
     padding: 25px 20px;
   }
-  .btnWrapper {
-    margin: 50px 0 70px 0;
-  }
   .btn {
-    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-height: 360px) {
+  .main {
+    padding: 10px 50px 0 50px;
+    height: calc(100vh - 70px);
+  }
+  .title {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
