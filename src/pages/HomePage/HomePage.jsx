@@ -1,7 +1,7 @@
 import { About } from "../../components/HomePage/About/About";
 
 import { Promotion } from "../../components/HomePage/Promotion/Promotion";
-import { Feedback } from "../../components/HomePage/Feedback/Feedback";
+import { Feedback } from "../../components/Feedback/Feedback";
 import { Main } from "../../components/HomePage/Main/Main";
 import { Motto } from "../../components/HomePage/Motto/Motto";
 import { Numbers } from "../../components/HomePage/Numbers/Numbers";
@@ -10,6 +10,14 @@ import styles from "./HomePage.module.scss";
 import { useRef } from "react";
 
 export const HomePage = () => {
+  const state = {
+    feedback: {
+      title: "Оставить заявку",
+      subtitle:
+        "Мы готовы предложить лучшие решения для вашего бизнеса. Оставьте свои данные и мы свяжемся с вами!",
+    },
+  };
+
   const servicesRef = useRef();
   const formRef = useRef();
 
@@ -29,7 +37,7 @@ export const HomePage = () => {
       <Numbers />
       <Promotion scrollToForm={scrollToForm} />
       <About />
-      <Feedback formRef={formRef} />
+      <Feedback state={state.feedback} formRef={formRef} />
     </div>
   );
 };

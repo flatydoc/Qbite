@@ -7,7 +7,7 @@ import { Info } from "../../components/Info/Info";
 import styles from "./DevelopmentPage.module.scss";
 
 import image from "../../assets/images/development_main.webp";
-import { Feedback } from "../../components/HomePage/Feedback/Feedback";
+import { Feedback } from "../../components/Feedback/Feedback";
 
 export const DevelopmentPage = () => {
   const state = {
@@ -128,6 +128,10 @@ export const DevelopmentPage = () => {
           "На начальном этапе может и должен: заказчик составляет ТЗ (рассказывает о пожеланиях, целях, целевой аудитории). Дизайнер изучает ТЗ и предлагает одно или несколько решений. Если заказчик одобряет их – специалист начинает работу. В процессе разработки допустимо несколько итераций бесплатных правок, но переделывать дизайн с нуля никто не будет, поэтому заранее определитесь с вашими идеями и целями.",
       },
     ],
+
+    feedback: {
+      title: "У вас остались вопросы?",
+    },
   };
 
   return (
@@ -137,7 +141,7 @@ export const DevelopmentPage = () => {
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
-      <Feedback />
+      <Feedback state={state.feedback} />
     </div>
   );
 };

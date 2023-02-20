@@ -11,9 +11,17 @@ export const Faq = (props) => {
   return (
     <section className={styles.faq}>
       <h2 className={`${styles.title} notranslate`}>F.A.Q.</h2>
-      <Accordion allowZeroExpanded className={styles.accordion}>
+      <Accordion
+        preExpanded={["1"]}
+        allowZeroExpanded
+        className={styles.accordion}
+      >
         {props.questions.map((question) => (
-          <AccordionItem key={question.id} className={styles.accordion__item}>
+          <AccordionItem
+            uuid={`${question.id}`}
+            key={question.id}
+            className={styles.accordion__item}
+          >
             <AccordionItemHeading>
               <AccordionItemButton className={styles.accordion__button}>
                 {question.heading}

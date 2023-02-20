@@ -7,6 +7,7 @@ import { Info } from "../../components/Info/Info";
 import styles from "./TargetPage.module.scss";
 
 import image from "../../assets/images/target_main.jpg";
+import { Feedback } from "../../components/Feedback/Feedback";
 
 export const TargetPage = () => {
   const state = {
@@ -76,6 +77,9 @@ export const TargetPage = () => {
           "Все зависит от сферы бизнеса. Лучший вариант – использовать оба метода продвижения. Контекст даст быстрые заявки и прибыль. SEO принесет узнаваемость и увеличит клиентопоток в долгосрочной перспективе.",
       },
     ],
+    feedback: {
+      title: "У вас остались вопросы?",
+    },
   };
 
   return (
@@ -85,6 +89,7 @@ export const TargetPage = () => {
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
+      <Feedback state={state.feedback} />
     </div>
   );
 };

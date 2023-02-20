@@ -6,10 +6,28 @@
   font-weight: 600;
   font-size: 40px;
   color: var(--yellow);
+  margin-bottom: 20px;
 }
 
 .wrapper {
   display: flex;
+}
+
+.content {
+  width: 50%;
+  padding-right: 50px;
+}
+
+.warning {
+  font-size: 12px;
+}
+
+.link {
+  color: var(--blue);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: 768px) {

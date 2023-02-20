@@ -37,6 +37,10 @@
 
   .privacyBtn {
     color: var(--blue);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

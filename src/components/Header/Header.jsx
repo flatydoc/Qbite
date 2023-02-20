@@ -4,6 +4,7 @@ import styles from "./Header.module.scss";
 import { Link } from "../ui/Link/Link";
 import { useState } from "react";
 import { Modal } from "../Modal/Modal";
+import classNames from "classnames";
 
 export const Header = () => {
   const [modalActive, setModalActive] = useState(false);
@@ -28,17 +29,15 @@ export const Header = () => {
       </nav>
       <button
         onClick={() => setModalActive(true)}
-        className={
-          modalActive
-            ? `${styles.burgerBtn}  ${styles.active}`
-            : styles.burgerBtn
-        }
+        className={classNames(styles.burgerBtn, {
+          [styles.active]: modalActive,
+        })}
       >
         <div></div>
         <div></div>
         <div></div>
       </button>
-      <Modal active={modalActive} setActive={setModalActive} />
+      <Modal isActive={modalActive} setIsActive={setModalActive} />
     </header>
   );
 };

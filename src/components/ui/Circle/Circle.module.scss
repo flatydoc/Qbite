@@ -9,22 +9,36 @@
 .circleBtn {
   position: relative;
   box-sizing: border-box !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   padding: 0;
-  width: 40px !important;
-  height: 40px !important;
+  width: 60px !important;
+  height: 60px !important;
 
   border: 1px solid #fff !important;
   border-radius: 50%;
+  backdrop-filter: blur(10px);
 
   background-color: transparent !important;
 
-  transition: all 0.5s;
-  animation: flicker 2s infinite ease;
+  transition: all 0.5s ease;
+  animation: flicker 4s linear infinite;
 
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    animation: radio 4s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
 
   &::after {
     content: url(../../../assets//icons/feedback.svg);
@@ -33,10 +47,6 @@
     left: 50%;
 
     transform: translateX(-50%) translateY(-50%);
-    width: 20px;
-    height: 20px;
-
-    // background-color: #fff;
   }
 
   div {
@@ -44,18 +54,40 @@
   }
 
   &:hover {
-    color: var(--blue);
+    animation: none;
+    transform: scale(110%);
+    border: 1px solid var(--blue) !important;
   }
 }
 
+.icon {
+  transform: translateX(-2px) translateY(2px);
+}
+
+.active {
+  content: url(../../../assets/icons/cross.svg);
+
+  animation: none;
+}
+
 .circleItem {
-  background-color: transparent !important;
+  box-sizing: border-box !important;
+  padding: 0;
+  width: 60px !important;
+  height: 60px !important;
   border: 1px solid #fff !important;
+
   color: #fff !important;
 
+  backdrop-filter: blur(10px);
+  background-color: transparent !important;
+
+  div {
+    font-size: 30px;
+  }
+
   &:hover {
-    background-color: transparent;
-    color: var(--blue) !important;
-    transform: scale(105%);
+    border: 1px solid var(--blue) !important;
+    transform: scale(110%);
   }
 }

@@ -6,11 +6,12 @@ import { Context } from "./Slides/Context/Context";
 import { Seo } from "./Slides/Seo/Seo";
 import { Target } from "./Slides/Target/Target";
 
-import { useRef } from "react";
-
-import img from "../../../assets/icons/logo.svg";
+import { useRef, useState } from "react";
+import classNames from "classnames";
 
 export const Services = (props) => {
+  const [activeIndex, setActiveIndex] = useState(-1);
+
   const settings = {
     dots: true,
     arrows: false,
@@ -31,13 +32,15 @@ export const Services = (props) => {
   const handleOnClick = (index) => {
     sliderRef.current.slickGoTo(index);
     currentRef.current.scrollIntoView({ behavior: "smooth" });
+
+    setActiveIndex(index);
   };
 
   const links = [
-    { id: 1, title: "Разработка сайтов", img },
-    { id: 2, title: "Контекстная реклама", img },
-    { id: 3, title: "SEO-продвижение", img },
-    { id: 4, title: "Реклама в социальных сетях", img },
+    { id: 1, title: "Разработка сайтов" },
+    { id: 2, title: "Контекстная реклама" },
+    { id: 3, title: "SEO-продвижение" },
+    { id: 4, title: "Реклама в социальных сетях" },
   ];
 
   return (
@@ -48,10 +51,12 @@ export const Services = (props) => {
           <div
             onClick={() => handleOnClick(index)}
             key={index}
-            className={styles.link}
+            className={classNames(styles.link, {
+              [styles.active]: activeIndex === index,
+            })}
           >
-            <img className={styles.img} src={link.img} alt={link.title} />
             <p className={styles.linkTitle}>{link.title}</p>
+            <span></span>
           </div>
         ))}
       </nav>

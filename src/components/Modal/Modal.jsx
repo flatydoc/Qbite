@@ -1,31 +1,41 @@
+import classNames from "classnames";
 import styles from "./Modal.module.scss";
 import { NavLink } from "react-router-dom";
 
-export const Modal = ({ active, setActive }) => {
+export const Modal = ({ isActive, setIsActive }) => {
+  const items = [
+    {
+      id: 1,
+      to: "development",
+      title: "РАЗРАБОТКА",
+    },
+    {
+      id: 2,
+      to: "context",
+      title: "КОНТЕКСТНАЯ РЕКЛАМА",
+    },
+    { id: 3, to: "seo", title: "SEO-ПРОДВИЖЕНИЕ" },
+    { id: 4, to: "target", title: "ТАРГЕТ" },
+    { id: 5, to: "contacts", title: "КОНТАКТЫ" },
+  ];
+
   return (
     <div
-      onClick={() => setActive(false)}
-      className={active ? `${styles.modal} ${styles.active}` : styles.modal}
+      onClick={() => setIsActive(false)}
+      className={classNames(styles.modal, {
+        [styles.active]: isActive,
+      })}
     >
       <div className={styles.content}>
-        <NavLink
-          to="development"
-          className={`${styles.development} ${styles.link}`}
-        >
-          <h3 className={styles.title}>РАЗРАБОТКА</h3>
-        </NavLink>
-        <NavLink to="context" className={`${styles.context}  ${styles.link}`}>
-          <h3 className={styles.title}>КОНТЕКСТНАЯ РЕКЛАМА</h3>
-        </NavLink>
-        <NavLink to="seo" className={`${styles.seo} ${styles.link}`}>
-          <h3 className={styles.title}>SEO-ПРОДВИЖЕНИЕ</h3>
-        </NavLink>
-        <NavLink to="target" className={`${styles.target} ${styles.link}`}>
-          <h3 className={styles.title}>ТАРГЕТ</h3>
-        </NavLink>
-        <NavLink to="contacts" className={`${styles.contacts} ${styles.link}`}>
-          <h3 className={styles.title}>КОНТАКТЫ</h3>
-        </NavLink>
+        {items.map((item, index) => (
+          <NavLink
+            key={index}
+            to={item.to}
+            className={`${styles.link} ${styles[item.to]}`}
+          >
+            <h3 className={styles.title}>{item.title}</h3>
+          </NavLink>
+        ))}
       </div>
     </div>
   );
