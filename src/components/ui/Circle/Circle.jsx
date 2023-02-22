@@ -2,12 +2,21 @@ import { CircleMenu, CircleMenuItem } from "react-circular-menu";
 import { useState } from "react";
 import styles from "./Circle.module.scss";
 import classNames from "classnames";
+import { useNavigate } from "react-router-dom";
 
 export const Circle = () => {
   const [isActive, setIsActive] = useState(false);
 
   const activeHandler = () => {
     setIsActive(!isActive);
+  };
+  let navigate = useNavigate();
+
+  const routeChange = () => {
+    navigate("contacts");
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   return (
@@ -28,7 +37,7 @@ export const Circle = () => {
       </CircleMenuItem>
       <CircleMenuItem
         className={styles.circleItem}
-        onClick={() => alert("Clicked the item")}
+        onClick={routeChange}
         tooltip="Заказать звонок"
       >
         <div className={`pi pi-phone`}></div>

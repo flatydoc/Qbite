@@ -7,6 +7,7 @@ export const ScrollTo = () => {
   return (
     <ScrollToTop
       smooth
+      top={600}
       component={<ScrollArrow />}
       className={styles.scrollTo}
     />

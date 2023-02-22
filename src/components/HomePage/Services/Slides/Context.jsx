@@ -1,13 +1,12 @@
-import styles from "./Context.module.scss";
-import { Button } from "../../../../ui/Button/Button";
+import styles from "./Slide.module.scss";
+import { Button } from "../../../ui/Button/Button";
 
-import image from "../../../../../assets/images/context.svg";
+import image from "../../../../assets/images/context.svg";
 
 export const Context = (props) => {
   return (
-    <div className={styles.context}>
+    <div className={styles.slide}>
       <img className={styles.img} src={image} alt="Context" />
-
       <div className={styles.content}>
         <h3 className={styles.title}>Контекстная реклама</h3>
         <p className={`${styles.subtitle} ${styles.blue}`}>ЯНДЕКС, GOOGLE</p>
@@ -40,7 +39,7 @@ export const Context = (props) => {
           </li>
         </ul>
         <p className={styles.footnote}>
-          *Средний чек – это средняя стоимость товара/услуги
+          * Средний чек – это средняя стоимость товара/услуги
         </p>
         <Button to={"context"} btnText={"ПОДРОБНЕЕ"} />
       </div>

@@ -1,10 +1,10 @@
 import styles from "./Services.module.scss";
 import Slider from "react-slick";
 
-import { Development } from "./Slides/Development/Development";
-import { Context } from "./Slides/Context/Context";
-import { Seo } from "./Slides/Seo/Seo";
-import { Target } from "./Slides/Target/Target";
+import { Development } from "./Slides/Development";
+import { Context } from "./Slides/Context";
+import { Seo } from "./Slides/Seo";
+import { Target } from "./Slides/Target";
 
 import { useRef, useState } from "react";
 import classNames from "classnames";

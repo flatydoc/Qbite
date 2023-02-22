@@ -1,5 +1,6 @@
 import styles from "./Promotion.module.scss";
 import image from "../../../assets/images/promotion.svg";
+import { Button } from "../../ui/Button/Button";
 export const Promotion = (props) => {
   return (
     <section className={styles.promotion}>
@@ -17,9 +18,7 @@ export const Promotion = (props) => {
           Оставьте заявку, и наш специалист поможет определить проблему
           абсолютно бесплатно.
         </p>
-        <button onClick={props.scrollToForm} className={styles.btn}>
-          <p className={styles.btnText}>ОСТАВИТЬ ЗАЯВКУ</p>
-        </button>
+        <Button event={props.scrollToForm} btnText={"ОСТАВИТЬ ЗАЯВКУ"} />
       </div>
       <img
         className={styles.img}

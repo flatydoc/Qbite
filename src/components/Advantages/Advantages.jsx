@@ -12,8 +12,8 @@ export const Advantages = (props) => {
         <p className={styles.subtitle}>{props.state.subtitle}</p>
       </div>
       <div className={styles.wrapper}>
-        {props.state.items.map((item) => (
-          <div className={styles.card}>
+        {props.state.items.map((item, index) => (
+          <div key={index} className={styles.card}>
             <div className={styles.content}>
               <h4 className={styles.cardTitle}>
                 <span className={styles.cardNumber}>{item.id}</span>

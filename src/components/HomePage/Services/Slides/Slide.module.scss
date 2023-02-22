@@ -1,4 +1,4 @@
-.target {
+.slide {
   position: relative;
   display: flex;
   padding-top: 20px;
@@ -31,8 +31,11 @@
 
 .list {
   margin: 20px 0;
-
   list-style-position: inside;
+}
+
+.desc {
+  line-height: 120%;
 }
 
 .blue {
@@ -46,15 +49,15 @@
   line-height: 20px;
 }
 
-.desc {
-  margin: 15px 0;
+.footnote {
+  margin-bottom: 15px;
 
-  line-height: 19px;
-  font-size: 14px;
+  font-size: 10px;
+  color: var(--blue);
 }
 
 @media (max-width: 1024px) {
-  .target {
+  .slide {
     display: block;
 
     .img {
@@ -63,6 +66,7 @@
       opacity: 0.1;
       position: absolute;
     }
+
     .content {
       width: 100%;
     }
@@ -74,11 +78,7 @@
     text-align: center;
     font-size: 25px;
   }
-
   .img {
     width: 100%;
   }
-}
-
-@media (max-width: 360px) {
 }

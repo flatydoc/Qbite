@@ -12,7 +12,7 @@ import { useRef } from "react";
 export const HomePage = () => {
   const state = {
     feedback: {
-      title: "Оставить заявку",
+      title: "Откройте дверь потоку клиентов!",
       subtitle:
         "Мы готовы предложить лучшие решения для вашего бизнеса. Оставьте свои данные и мы свяжемся с вами!",
     },
@@ -31,7 +31,7 @@ export const HomePage = () => {
 
   return (
     <div className={styles.homePage}>
-      <Main scrollToServices={scrollToServices} />
+      <Main scrollToServices={scrollToServices} scrollToForm={scrollToForm} />
       <Motto />
       <Services servicesRef={servicesRef} />
       <Numbers />

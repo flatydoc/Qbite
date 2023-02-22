@@ -1,6 +1,5 @@
 import styles from "./Main.module.scss";
 import { Button } from "../../ui/Button/Button";
-import { ScrollArrow } from "../../ui/Arrows/ScrollArrow";
 
 export const Main = (props) => {
   return (
@@ -11,7 +10,7 @@ export const Main = (props) => {
         </p>
         <h1 className={styles.title}>СТУДИЯ ВЕБ-РАЗРАБОТКИ И МАРКЕТИНГА</h1>
         <div className={styles.btnWrapper}>
-          <Button to={"contacts"} btnText={"ЗАКАЗАТЬ ЗВОНОК"} />
+          <Button event={props.scrollToForm} btnText={"ЗАКАЗАТЬ ЗВОНОК"} />
           <button onClick={props.scrollToServices} className={styles.btn}>
             <p className={styles.btnText}>Наши услуги</p>
             <div className={`${styles.btnIcon} pi pi-arrow-right`}></div>

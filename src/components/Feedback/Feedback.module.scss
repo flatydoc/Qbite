@@ -1,25 +1,54 @@
 .feedback {
-  padding: 50px 100px;
+  // background-image: url(../../assets/images/door.png);
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }
 
 .title {
   font-weight: 600;
   font-size: 40px;
-  color: var(--yellow);
-  margin-bottom: 20px;
+  color: var(--violet);
+  margin-bottom: 50px;
+  margin-left: 100px;
 }
 
 .wrapper {
+  background-image: url(../../assets/images/door.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
   display: flex;
+  justify-content: flex-end;
 }
 
-.content {
-  width: 50%;
+.subtitle {
+  width: 30%;
   padding-right: 50px;
 }
 
-.warning {
-  font-size: 12px;
+.formWrapper {
+  margin-right: 100px;
+  padding: 50px;
+  width: 800px;
+  height: 400px;
+  display: flex;
+  background-color: rgb(34, 37, 43);
+}
+
+.formItem {
+  margin: 25px 0;
+}
+
+.input {
+  resize: none;
+  background-color: transparent;
+  width: 100%;
+  color: #fff;
+}
+
+.notice {
+  margin-top: 15px;
+  font-size: 10px;
 }
 
 .link {
@@ -31,16 +60,14 @@
 }
 
 @media (max-width: 768px) {
-  .feedback {
-    padding: 50px;
+  .title {
+    margin-left: 50px;
   }
 }
 
 @media (max-width: 576px) {
-  .feedback {
-    padding: 25px;
-  }
   .title {
+    margin-left: 0;
     text-align: center;
     font-size: 30px;
   }

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./Button.module.scss";
 
 export const Button = (props) => {
-  const scroll = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
     });
@@ -10,9 +10,15 @@ export const Button = (props) => {
 
   return (
     <>
-      <NavLink onClick={scroll} className={styles.btn} to={props.to}>
-        <p className={styles.btnText}>{props.btnText}</p>
-      </NavLink>
+      {props.to ? (
+        <NavLink onClick={scrollToTop} className={styles.btn} to={props.to}>
+          <p className={styles.btnText}>{props.btnText}</p>
+        </NavLink>
+      ) : (
+        <button onClick={props.event} className={styles.btn}>
+          <p className={styles.btnText}>{props.btnText}</p>
+        </button>
+      )}
     </>
   );
 };

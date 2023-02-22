@@ -16,10 +16,10 @@ export const Faq = (props) => {
         allowZeroExpanded
         className={styles.accordion}
       >
-        {props.questions.map((question) => (
+        {props.questions.map((question, index) => (
           <AccordionItem
             uuid={`${question.id}`}
-            key={question.id}
+            key={index}
             className={styles.accordion__item}
           >
             <AccordionItemHeading>

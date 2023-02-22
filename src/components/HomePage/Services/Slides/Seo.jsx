@@ -1,11 +1,11 @@
-import styles from "./Seo.module.scss";
-import { Button } from "../../../../ui/Button/Button";
+import styles from "./Slide.module.scss";
+import { Button } from "../../../ui/Button/Button";
 
-import image from "../../../../../assets/images/seo.svg";
+import image from "../../../../assets/images/seo.svg";
 
 export const Seo = (props) => {
   return (
-    <div className={styles.seo}>
+    <div className={styles.slide}>
       <img className={styles.img} src={image} alt="SEO" />
 
       <div className={styles.content}>

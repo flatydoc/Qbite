@@ -33,6 +33,8 @@
   cursor: pointer;
 
   .linkTitle {
+    color: var(--light);
+
     transition-property: color;
     transition-delay: 0.4s;
   }
@@ -64,6 +66,10 @@
 
 .active {
   border-bottom: 2px solid var(--blue);
+
+  .linkTitle {
+    color: #fff;
+  }
 }
 
 .linkTitle {

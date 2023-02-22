@@ -1,11 +1,11 @@
-import styles from "./Development.module.scss";
-import { Button } from "../../../../ui/Button/Button";
+import styles from "./Slide.module.scss";
+import { Button } from "../../../ui/Button/Button";
 
-import image from "../../../../../assets/images/development.svg";
+import image from "../../../../assets/images/development.svg";
 
 export const Development = (props) => {
   return (
-    <div className={styles.development}>
+    <div className={styles.slide}>
       <img className={styles.img} src={image} alt="Development" />
 
       <div className={styles.content}>

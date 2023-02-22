@@ -8,8 +8,8 @@ export const Stages = (props) => {
         <span className={styles.line}>
           <span style={{ height: `100px` }} className={styles.progress}></span>
         </span>
-        {props.state.items.map((item) => (
-          <div key={item.id} className={styles.stage}>
+        {props.state.items.map((item, index) => (
+          <div key={index} className={styles.stage}>
             <h3 className={styles.subtitle}>
               {item.id}. {item.subtitle}
             </h3>
