@@ -9,8 +9,11 @@ import styles from "./ContextPage.module.scss";
 import image from "../../assets/images/context_main.webp";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
+import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const ContextPage = () => {
+  useDocumentTitle("Quantum | Контекстная реклама");
+
   const state = {
     main: {
       title: "Профессиональная настройка контекстной рекламы",

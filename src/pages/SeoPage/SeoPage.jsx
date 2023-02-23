@@ -9,8 +9,11 @@ import styles from "./SeoPage.module.scss";
 import image from "../../assets/images/seo_main.jpg";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
+import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const SeoPage = () => {
+  useDocumentTitle("Quantum | SEO-продвижение");
+
   const state = {
     main: {
       title: "SEO-продвижение",

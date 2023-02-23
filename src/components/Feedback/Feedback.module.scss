@@ -5,7 +5,7 @@
   font-weight: 600;
   font-size: 40px;
   color: var(--blue);
-  margin: 50px 0 50px 100px;
+  margin: 50px 100px;
 }
 
 .wrapper {
@@ -79,7 +79,7 @@
     margin: 20px 100px 50px 100px;
   }
   .title {
-    margin-left: 0;
+    margin: 50px;
     text-align: center;
   }
 }
@@ -93,7 +93,7 @@
 @media (max-width: 576px) {
   .title {
     font-size: 30px;
-    margin: 25px 0 25px 0;
+    margin: 25px;
   }
   .formWrapper {
     margin: 0 25px 50px 25px;

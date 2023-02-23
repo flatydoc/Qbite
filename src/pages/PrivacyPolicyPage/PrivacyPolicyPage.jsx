@@ -1,6 +1,9 @@
 import styles from "./PrivacyPolicyPage.module.scss";
+import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const PrivacyPolicyPage = () => {
+  useDocumentTitle("Quantum | Политика конфеденциальности");
+
   return (
     <div className={styles.privacyPolicyPage}>
       <h2 className={styles.title}>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h2>

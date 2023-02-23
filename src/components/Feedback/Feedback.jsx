@@ -13,15 +13,15 @@ import { FormService } from "../../core/services/form.service";
 import { Button } from "../ui/Button/Button";
 
 export const Feedback = (props) => {
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const toast = useRef(null);
 
   const load = () => {
-    setLoading(true);
+    setIsLoading(true);
 
     setTimeout(() => {
-      setLoading(false);
+      setIsLoading(false);
     }, 1000);
   };
 
@@ -236,7 +236,11 @@ export const Feedback = (props) => {
               ) : (
                 ""
               )}
-              <Button status={loading} type={"submit"} btnText={"ОТПРАВИТЬ"} />
+              <Button
+                isLoading={isLoading}
+                type={"submit"}
+                btnText={"ОТПРАВИТЬ"}
+              />
             </form>
             <p className={styles.notice}>
               * Отправляя заявку, вы соглашаетесь с

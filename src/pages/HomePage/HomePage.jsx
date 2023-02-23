@@ -8,8 +8,11 @@ import { Numbers } from "../../components/HomePage/Numbers/Numbers";
 import { Services } from "../../components/HomePage/Services/Services";
 import styles from "./HomePage.module.scss";
 import { useRef } from "react";
+import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const HomePage = () => {
+  useDocumentTitle("Quantum - Студия веб-разработки и маркетинга");
+
   const state = {
     feedback: {
       title: "Откройте дверь потоку клиентов!",

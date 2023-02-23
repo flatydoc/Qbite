@@ -17,10 +17,10 @@ export const Button = (props) => {
         </NavLink>
       ) : props.type === "submit" ? (
         <button
-          disabled={props.status ? true : false}
+          disabled={props.isLoading ? true : false}
           type="submit"
           className={classNames(styles.formBtn, styles.btn, {
-            [styles.loading]: props.status,
+            [styles.loading]: props.isLoading,
           })}
         >
           <p className={styles.btnText}>{props.btnText}</p>

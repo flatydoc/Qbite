@@ -4,7 +4,11 @@ import useMouse from "@react-hook/mouse-position";
 import { motion } from "framer-motion";
 import { Button } from "../../components/ui/Button/Button";
 
+import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
+
 export const ErrorPage = () => {
+  useDocumentTitle("Quantum | 404");
+
   const [cursorVariant, setCursorVariant] = useState("default");
 
   const ref = useRef(null);

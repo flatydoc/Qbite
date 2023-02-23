@@ -9,8 +9,11 @@ import styles from "./TargetPage.module.scss";
 import image from "../../assets/images/target_main.jpg";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
+import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const TargetPage = () => {
+  useDocumentTitle("Quantum | Реклама в социальных сетях");
+
   const state = {
     main: {
       title: "Реклама в социальных сетях",
