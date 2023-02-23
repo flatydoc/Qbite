@@ -10,7 +10,11 @@ export const Main = (props) => {
         </p>
         <h1 className={styles.title}>СТУДИЯ ВЕБ-РАЗРАБОТКИ И МАРКЕТИНГА</h1>
         <div className={styles.btnWrapper}>
-          <Button event={props.scrollToForm} btnText={"ЗАКАЗАТЬ ЗВОНОК"} />
+          <Button
+            type={"button"}
+            event={props.scrollToForm}
+            btnText={"ЗАКАЗАТЬ ЗВОНОК"}
+          />
           <button onClick={props.scrollToServices} className={styles.btn}>
             <p className={styles.btnText}>Наши услуги</p>
             <div className={`${styles.btnIcon} pi pi-arrow-right`}></div>

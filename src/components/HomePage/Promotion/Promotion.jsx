@@ -18,7 +18,11 @@ export const Promotion = (props) => {
           Оставьте заявку, и наш специалист поможет определить проблему
           абсолютно бесплатно.
         </p>
-        <Button event={props.scrollToForm} btnText={"ОСТАВИТЬ ЗАЯВКУ"} />
+        <Button
+          type={"button"}
+          event={props.scrollToForm}
+          btnText={"ОСТАВИТЬ ЗАЯВКУ"}
+        />
       </div>
       <img
         className={styles.img}

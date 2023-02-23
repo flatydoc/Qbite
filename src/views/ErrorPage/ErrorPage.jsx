@@ -71,7 +71,7 @@ export const ErrorPage = () => {
           Page not found
         </p>
         <div onMouseEnter={btnEnter} onMouseLeave={btnLeave}>
-          <Button to={"/"} btnText={"НА ГЛАВНУЮ"} />
+          <Button type={"button"} to={"/"} btnText={"НА ГЛАВНУЮ"} />
         </div>
       </div>
       <motion.div

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./Link.module.scss";
 
 export const Link = (props) => {
-  const scroll = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
     });
@@ -13,7 +13,7 @@ export const Link = (props) => {
 
   return (
     <>
-      <NavLink onClick={scroll} className={customLink} to={props.to}>
+      <NavLink onClick={scrollToTop} className={customLink} to={props.to}>
         <p className={styles.linkText}>{props.linkText}</p>
         <span></span>
       </NavLink>

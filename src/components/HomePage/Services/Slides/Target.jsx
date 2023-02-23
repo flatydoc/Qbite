@@ -42,7 +42,7 @@ export const Target = (props) => {
           Мы продадим для вас все, что покупают в интернете! Оставьте заявку, и
           мы посчитаем бюджет.
         </p>
-        <Button to={"target"} btnText={"ПОДРОБНЕЕ"} />
+        <Button type={"button"} to={"target"} btnText={"ПОДРОБНЕЕ"} />
       </div>
     </div>
   );

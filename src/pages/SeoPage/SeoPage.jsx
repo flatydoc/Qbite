@@ -6,8 +6,9 @@ import { Info } from "../../components/Info/Info";
 
 import styles from "./SeoPage.module.scss";
 
-import image from "../../assets/images/seo_main.jpeg";
+import image from "../../assets/images/seo_main.jpg";
 import { Feedback } from "../../components/Feedback/Feedback";
+import { useRef } from "react";
 
 export const SeoPage = () => {
   const state = {
@@ -81,17 +82,24 @@ export const SeoPage = () => {
       title: "У вас остались вопросы?",
       subtitle:
         "Мы готовы предложить лучшие решения для вашего бизнеса. Оставьте свои данные и мы свяжемся с вами!",
+      option: { name: "SEO-продвижение", code: "3" },
     },
+  };
+
+  const formRef = useRef();
+
+  const scrollToForm = () => {
+    formRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className={styles.seoPage}>
-      <Main state={state.main} />
+      <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
-      <Feedback state={state.feedback} />
+      <Feedback state={state.feedback} formRef={formRef} />
     </div>
   );
 };

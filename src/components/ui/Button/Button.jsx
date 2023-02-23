@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Button.module.scss";
+import classNames from "classnames";
 
 export const Button = (props) => {
   const scrollToTop = () => {
@@ -14,8 +15,18 @@ export const Button = (props) => {
         <NavLink onClick={scrollToTop} className={styles.btn} to={props.to}>
           <p className={styles.btnText}>{props.btnText}</p>
         </NavLink>
+      ) : props.type === "submit" ? (
+        <button
+          disabled={props.status ? true : false}
+          type="submit"
+          className={classNames(styles.formBtn, styles.btn, {
+            [styles.loading]: props.status,
+          })}
+        >
+          <p className={styles.btnText}>{props.btnText}</p>
+        </button>
       ) : (
-        <button onClick={props.event} className={styles.btn}>
+        <button type="button" onClick={props.event} className={styles.btn}>
           <p className={styles.btnText}>{props.btnText}</p>
         </button>
       )}

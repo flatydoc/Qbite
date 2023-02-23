@@ -1,3 +1,4 @@
+import { Button } from "../ui/Button/Button";
 import styles from "./Main.module.scss";
 
 export const Main = (props) => {
@@ -24,9 +25,11 @@ export const Main = (props) => {
         Получите индивидуальное предложение
         <i className={`${styles.icon} pi pi-angle-double-right`}></i>
       </p>
-      <button onClick={props.scrollToForm} className={styles.btn}>
-        <p className={styles.btnText}>ОБСУДИТЬ ПРОЕКТ</p>
-      </button>
+      <Button
+        type={"button"}
+        event={props.scrollToForm}
+        btnText={"ОБСУДИТЬ ПРОЕКТ"}
+      />
     </section>
   );
 };

@@ -8,6 +8,7 @@ import styles from "./DevelopmentPage.module.scss";
 
 import image from "../../assets/images/development_main.webp";
 import { Feedback } from "../../components/Feedback/Feedback";
+import { useRef } from "react";
 
 export const DevelopmentPage = () => {
   const state = {
@@ -133,17 +134,24 @@ export const DevelopmentPage = () => {
       title: "У вас остались вопросы?",
       subtitle:
         "Мы готовы предложить лучшие решения для вашего бизнеса. Оставьте свои данные и мы свяжемся с вами!",
+      option: { name: "Разработка сайтов", code: "1" },
     },
+  };
+
+  const formRef = useRef();
+
+  const scrollToForm = () => {
+    formRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className={styles.developmentPage}>
-      <Main state={state.main} />
+      <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
-      <Feedback state={state.feedback} />
+      <Feedback state={state.feedback} formRef={formRef} />
     </div>
   );
 };

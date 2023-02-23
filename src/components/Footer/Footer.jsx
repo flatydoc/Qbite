@@ -5,6 +5,12 @@ import logo from "../../assets/icons/logo.svg";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
@@ -16,7 +22,6 @@ export const Footer = () => {
           <Link to={"target"} linkText={"Таргет"} />
           <Link to={"contacts"} linkText={"Контакты"} />
         </nav>
-        <div>123</div>
       </div>
       <div className={styles.copyright}>
         <p>
@@ -26,7 +31,11 @@ export const Footer = () => {
           </NavLink>
           Все права защищены.
         </p>
-        <NavLink className={styles.privacyBtn} to="privacy-policy">
+        <NavLink
+          onClick={scrollToTop}
+          className={styles.privacyBtn}
+          to="privacy-policy"
+        >
           Политика конфиденциальности
         </NavLink>
       </div>

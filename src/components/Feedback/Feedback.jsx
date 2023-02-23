@@ -1,7 +1,6 @@
 import styles from "./Feedback.module.scss";
 import { useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { Button } from "primereact/button";
 import { classNames } from "primereact/utils";
 import { Toast } from "primereact/toast";
 import { InputText } from "primereact/inputtext";
@@ -11,9 +10,12 @@ import { Dropdown } from "primereact/dropdown";
 
 import { InputTextarea } from "primereact/inputtextarea";
 import { FormService } from "../../core/services/form.service";
+import { Button } from "../ui/Button/Button";
 
 export const Feedback = (props) => {
   const [loading, setLoading] = useState(false);
+
+  const toast = useRef(null);
 
   const load = () => {
     setLoading(true);
@@ -22,8 +24,6 @@ export const Feedback = (props) => {
       setLoading(false);
     }, 1000);
   };
-
-  const toast = useRef(null);
 
   const showSuccess = () => {
     toast.current.show({
@@ -74,20 +74,29 @@ export const Feedback = (props) => {
   };
 
   const onSubmit = async (data) => {
+    if (props.state.option) {
+      data.option = props.state.option;
+    }
+    load();
     try {
-      load();
       await FormService.send(data);
       setTimeout(() => {
-        data && showSuccess();
+        showSuccess();
         reset();
-      }, 500);
+      }, 1000);
       console.log(data);
     } catch (error) {
       setTimeout(() => {
         showError();
-      }, 500);
+      }, 1000);
       console.log(error);
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   return (
@@ -98,13 +107,13 @@ export const Feedback = (props) => {
           <p className={styles.subtitle}>{props.state.subtitle}</p>
           <div className={styles.form}>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className={styles.formItem}>
+              <div className={styles.flex}>
                 <Controller
                   name="name"
                   control={control}
                   rules={{ required: "Введите Ваше имя" }}
                   render={({ field, fieldState }) => (
-                    <>
+                    <div className={styles.formItem}>
                       <label
                         htmlFor={field.name}
                         className={classNames({ "p-error": errors.value })}
@@ -127,17 +136,15 @@ export const Feedback = (props) => {
                         </label>
                       </span>
                       {getFormErrorMessage(field.name)}
-                    </>
+                    </div>
                   )}
                 />
-              </div>
-              <div className={styles.formItem}>
                 <Controller
                   name="phone"
                   control={control}
                   rules={{ required: "Введите номер телефона" }}
                   render={({ field, fieldState }) => (
-                    <>
+                    <div className={styles.formItem}>
                       <label
                         htmlFor={field.phone}
                         className={classNames({ "p-error": errors.value })}
@@ -161,42 +168,21 @@ export const Feedback = (props) => {
                         </label>
                       </span>
                       {getFormErrorMessage(field.name)}
-                    </>
+                    </div>
                   )}
                 />
               </div>
-              <div className={styles.formItem}>
-                <Controller
-                  name="text"
-                  control={control}
-                  render={({ field, fieldState }) => (
-                    <>
-                      <span className="p-float-label">
-                        <InputTextarea
-                          className={styles.input}
-                          rows={4}
-                          cols={20}
-                          id={field.text}
-                          value={field.value}
-                          onChange={(e) => field.onChange(e.target.value)}
-                        />
-                        <label
-                          style={{ color: "#acb4c3" }}
-                          htmlFor={field.text}
-                        >
-                          Текст сообщения
-                        </label>
-                      </span>
-                    </>
-                  )}
-                />
-              </div>
-              <div className={styles.formItem}>
+              {props.state.option ? (
+                ""
+              ) : (
                 <Controller
                   name="option"
                   control={control}
                   render={({ field, fieldState }) => (
-                    <>
+                    <div
+                      style={{ marginBottom: "36px" }}
+                      className={styles.formItem}
+                    >
                       <span className="p-float-label">
                         <Dropdown
                           value={field.value}
@@ -215,21 +201,50 @@ export const Feedback = (props) => {
                           С чем нужна помощь?
                         </label>
                       </span>
-                    </>
+                    </div>
                   )}
                 />
-              </div>
-              <Button
-                loading={loading}
-                label="Отпавить"
-                type="submit"
-                icon="pi pi-send"
-                iconPos="right"
-              />
+              )}
+              {props.state.option ? (
+                <Controller
+                  name="text"
+                  control={control}
+                  render={({ field, fieldState }) => (
+                    <div
+                      style={{ marginBottom: "36px" }}
+                      className={styles.formItem}
+                    >
+                      <span className="p-float-label">
+                        <InputTextarea
+                          className={styles.input}
+                          rows={4}
+                          cols={20}
+                          id={field.text}
+                          value={field.value}
+                          onChange={(e) => field.onChange(e.target.value)}
+                        />
+                        <label
+                          style={{ color: "#acb4c3" }}
+                          htmlFor={field.text}
+                        >
+                          Текст сообщения
+                        </label>
+                      </span>
+                    </div>
+                  )}
+                />
+              ) : (
+                ""
+              )}
+              <Button status={loading} type={"submit"} btnText={"ОТПРАВИТЬ"} />
             </form>
             <p className={styles.notice}>
               * Отправляя заявку, вы соглашаетесь с
-              <NavLink className={styles.link} to="/privacy-policy">
+              <NavLink
+                onClick={scrollToTop}
+                className={styles.link}
+                to="/privacy-policy"
+              >
                 <span> Политикой Конфиденциальности</span>
               </NavLink>
             </p>
