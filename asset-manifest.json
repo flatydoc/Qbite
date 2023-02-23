@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Quantum/static/css/main.376b66c0.css",
-    "main.js": "/Quantum/static/js/main.51a52bd3.js",
+    "main.css": "/Quantum/static/css/main.befd0044.css",
+    "main.js": "/Quantum/static/js/main.1bd365d5.js",
     "static/media/stages.jpg": "/Quantum/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/target.jpg": "/Quantum/static/media/target.e016a577a409378b0332.jpg",
     "static/media/context.jpg": "/Quantum/static/media/context.0444c89279902d75cd7a.jpg",
@@ -36,11 +36,11 @@
     "static/media/slick.woff": "/Quantum/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Quantum/index.html",
     "static/media/cross.svg": "/Quantum/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.376b66c0.css.map": "/Quantum/static/css/main.376b66c0.css.map",
-    "main.51a52bd3.js.map": "/Quantum/static/js/main.51a52bd3.js.map"
+    "main.befd0044.css.map": "/Quantum/static/css/main.befd0044.css.map",
+    "main.1bd365d5.js.map": "/Quantum/static/js/main.1bd365d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.376b66c0.css",
-    "static/js/main.51a52bd3.js"
+    "static/css/main.befd0044.css",
+    "static/js/main.1bd365d5.js"
   ]
 }
