@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Quantum/static/css/main.dd6841da.css",
-    "main.js": "/Quantum/static/js/main.bc2a3d07.js",
+    "main.css": "/Quantum/static/css/main.376b66c0.css",
+    "main.js": "/Quantum/static/js/main.51a52bd3.js",
     "static/media/stages.jpg": "/Quantum/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/target.jpg": "/Quantum/static/media/target.e016a577a409378b0332.jpg",
     "static/media/context.jpg": "/Quantum/static/media/context.0444c89279902d75cd7a.jpg",
     "static/media/error_page.jpg": "/Quantum/static/media/error_page.eb981f37e407d5a3a24b.jpg",
     "static/media/seo.jpg": "/Quantum/static/media/seo.7c1034e18702fd1d9830.jpg",
     "static/media/contacts.jpg": "/Quantum/static/media/contacts.552be0cf56664119e25c.jpg",
+    "static/media/seo_main.jpg": "/Quantum/static/media/seo_main.130f7cd9e35a210af7dc.jpg",
     "static/media/form.jpg": "/Quantum/static/media/form.ce2bebec6b122cca89b9.jpg",
     "static/media/primeicons.svg": "/Quantum/static/media/primeicons.e1441b135b3ca9ad643c.svg",
     "static/media/main.jpg": "/Quantum/static/media/main.b86a9ab9d37a8f490617.jpg",
     "static/media/context_main.webp": "/Quantum/static/media/context_main.9b5a5aa4bfe5fe54ab3e.webp",
     "static/media/target_main.jpg": "/Quantum/static/media/target_main.f3ccb1afe609f4b95519.jpg",
-    "static/media/seo_main.jpeg": "/Quantum/static/media/seo_main.21b6c45fb6227b7d915f.jpeg",
     "static/media/development_main.webp": "/Quantum/static/media/development_main.87e6956b8939a5b74b32.webp",
     "static/media/primeicons.eot": "/Quantum/static/media/primeicons.d44157bdfa026dc877af.eot",
     "static/media/primeicons.woff": "/Quantum/static/media/primeicons.10d3152104f2208ac82a.woff",
@@ -36,11 +36,11 @@
     "static/media/slick.woff": "/Quantum/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Quantum/index.html",
     "static/media/cross.svg": "/Quantum/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.dd6841da.css.map": "/Quantum/static/css/main.dd6841da.css.map",
-    "main.bc2a3d07.js.map": "/Quantum/static/js/main.bc2a3d07.js.map"
+    "main.376b66c0.css.map": "/Quantum/static/css/main.376b66c0.css.map",
+    "main.51a52bd3.js.map": "/Quantum/static/js/main.51a52bd3.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd6841da.css",
-    "static/js/main.bc2a3d07.js"
+    "static/css/main.376b66c0.css",
+    "static/js/main.51a52bd3.js"
   ]
 }
