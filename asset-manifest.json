@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Quantum/static/css/main.f184fa58.css",
-    "main.js": "/Quantum/static/js/main.3712e543.js",
+    "main.css": "/Quantum/static/css/main.1ac66ff8.css",
+    "main.js": "/Quantum/static/js/main.46243fa7.js",
     "static/media/stages.jpg": "/Quantum/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/target.jpg": "/Quantum/static/media/target.e016a577a409378b0332.jpg",
     "static/media/context.jpg": "/Quantum/static/media/context.0444c89279902d75cd7a.jpg",
@@ -28,19 +28,19 @@
     "static/media/development.svg": "/Quantum/static/media/development.fb3c0f6fa95c74b86b2800e1d97fb453.svg",
     "static/media/modal_development.jpg": "/Quantum/static/media/modal_development.689273e5705d6837906f.jpg",
     "static/media/context.svg": "/Quantum/static/media/context.98d9b1464921811336679256b4745626.svg",
+    "index.html": "/Quantum/index.html",
     "static/media/feedback.svg": "/Quantum/static/media/feedback.fb642b2493151d2df9cd.svg",
     "static/media/logo.svg": "/Quantum/static/media/logo.3524e80c06e609050408f5868ef78982.svg",
     "static/media/slick.svg": "/Quantum/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Quantum/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/Quantum/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Quantum/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/Quantum/index.html",
     "static/media/cross.svg": "/Quantum/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.f184fa58.css.map": "/Quantum/static/css/main.f184fa58.css.map",
-    "main.3712e543.js.map": "/Quantum/static/js/main.3712e543.js.map"
+    "main.1ac66ff8.css.map": "/Quantum/static/css/main.1ac66ff8.css.map",
+    "main.46243fa7.js.map": "/Quantum/static/js/main.46243fa7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f184fa58.css",
-    "static/js/main.3712e543.js"
+    "static/css/main.1ac66ff8.css",
+    "static/js/main.46243fa7.js"
   ]
 }
