@@ -1,12 +1,9 @@
 {
   "files": {
-    "main.css": "/Quantum/static/css/main.9b704a06.css",
-    "main.js": "/Quantum/static/js/main.9192521c.js",
+    "main.css": "/Quantum/static/css/main.ce8664df.css",
+    "main.js": "/Quantum/static/js/main.0694f467.js",
     "static/media/stages.jpg": "/Quantum/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
-    "static/media/target.jpg": "/Quantum/static/media/target.e016a577a409378b0332.jpg",
-    "static/media/context.jpg": "/Quantum/static/media/context.0444c89279902d75cd7a.jpg",
     "static/media/error_page.jpg": "/Quantum/static/media/error_page.eb981f37e407d5a3a24b.jpg",
-    "static/media/seo.jpg": "/Quantum/static/media/seo.7c1034e18702fd1d9830.jpg",
     "static/media/contacts.jpg": "/Quantum/static/media/contacts.552be0cf56664119e25c.jpg",
     "static/media/seo_main.jpg": "/Quantum/static/media/seo_main.130f7cd9e35a210af7dc.jpg",
     "static/media/form.jpg": "/Quantum/static/media/form.ce2bebec6b122cca89b9.jpg",
@@ -26,7 +23,6 @@
     "static/media/door.png": "/Quantum/static/media/door.ca54cd2c04a88a3aa597.png",
     "static/media/seo.svg": "/Quantum/static/media/seo.7c82ae2010df69fea6d6c3579ecebba4.svg",
     "static/media/development.svg": "/Quantum/static/media/development.fb3c0f6fa95c74b86b2800e1d97fb453.svg",
-    "static/media/modal_development.jpg": "/Quantum/static/media/modal_development.689273e5705d6837906f.jpg",
     "static/media/context.svg": "/Quantum/static/media/context.98d9b1464921811336679256b4745626.svg",
     "index.html": "/Quantum/index.html",
     "static/media/feedback.svg": "/Quantum/static/media/feedback.fb642b2493151d2df9cd.svg",
@@ -36,11 +32,11 @@
     "static/media/slick.ttf": "/Quantum/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Quantum/static/media/slick.295183786cd8a1389865.woff",
     "static/media/cross.svg": "/Quantum/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.9b704a06.css.map": "/Quantum/static/css/main.9b704a06.css.map",
-    "main.9192521c.js.map": "/Quantum/static/js/main.9192521c.js.map"
+    "main.ce8664df.css.map": "/Quantum/static/css/main.ce8664df.css.map",
+    "main.0694f467.js.map": "/Quantum/static/js/main.0694f467.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b704a06.css",
-    "static/js/main.9192521c.js"
+    "static/css/main.ce8664df.css",
+    "static/js/main.0694f467.js"
   ]
 }
