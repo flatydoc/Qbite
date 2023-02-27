@@ -13,26 +13,34 @@ export const Header = () => {
     setModalActive(!modalActive);
   };
 
+  const links = [
+    { to: "development", text: "Разработка" },
+    { to: "context", text: "Контекстная реклама" },
+    { to: "seo", text: "SEO-продвижение" },
+    { to: "target", text: "Таргет" },
+    { to: "contacts", text: "Контакты" },
+  ];
+
   return (
-    <header className={styles.header}>
-      <NavLink to="/">
-        <h2 className={styles.logo}>
-          <img className={styles.logoImg} src={logo} alt="Quantum logo" />
-          <p className={styles.logoText}>
-            <span className="visually-hidden">Q</span>
-            <span className="notranslate">AUNTUM</span>
-          </p>
-        </h2>
-      </NavLink>
-      <nav className={styles.nav}>
-        <Link to={"development"} linkText={"Разработка"} />
-        <Link to={"context"} linkText={"Контекстная реклама"} />
-        <Link to={"seo"} linkText={"SEO-продвижение"} />
-        <Link to={"target"} linkText={"Таргет"} />
-        <Link to={"contacts"} linkText={"Контакты"} />
-      </nav>
-      <BurgerBtn event={modalActiveHandler} modalStatus={modalActive} />
+    <>
+      <header className={styles.header}>
+        <NavLink to="/">
+          <h2 className={styles.logo}>
+            <img className={styles.logoImg} src={logo} alt="Quantum logo" />
+            <p className={styles.logoText}>
+              <span className="visually-hidden">Q</span>
+              <span className="notranslate">AUNTUM</span>
+            </p>
+          </h2>
+        </NavLink>
+        <nav className={styles.nav}>
+          {links.map((link, index) => (
+            <Link key={index} to={link.to} text={link.text} />
+          ))}
+        </nav>
+        <BurgerBtn event={modalActiveHandler} modalStatus={modalActive} />
+      </header>
       <Modal isActive={modalActive} setIsActive={setModalActive} />
-    </header>
+    </>
   );
 };

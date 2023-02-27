@@ -11,16 +11,23 @@ export const Footer = () => {
     });
   };
 
+  const links = [
+    { to: "development", text: "Разработка" },
+    { to: "context", text: "Контекстная реклама" },
+    { to: "seo", text: "SEO-продвижение" },
+    { to: "target", text: "Таргет" },
+    { to: "contacts", text: "Контакты" },
+  ];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <img className={styles.logo} src={logo} alt="Quantum logo" />
+
         <nav className={styles.nav}>
-          <Link to={"development"} linkText={"Разработка"} />
-          <Link to={"context"} linkText={"Контекстная реклама"} />
-          <Link to={"seo"} linkText={"SEO-продвижение"} />
-          <Link to={"target"} linkText={"Таргет"} />
-          <Link to={"contacts"} linkText={"Контакты"} />
+          {links.map((link, index) => (
+            <Link key={index} to={link.to} text={link.text} />
+          ))}
         </nav>
       </div>
       <div className={styles.copyright}>

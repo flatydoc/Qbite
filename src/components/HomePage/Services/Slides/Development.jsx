@@ -41,7 +41,7 @@ export const Development = (props) => {
             интернете
           </li>
         </ul>
-        <Button type={"button"} to={"development"} btnText={"ПОДРОБНЕЕ"} />
+        <Button type="link" to="development" btnText="ПОДРОБНЕЕ" />
       </div>
     </div>
   );

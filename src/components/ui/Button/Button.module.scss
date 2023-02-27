@@ -80,3 +80,9 @@
     width: 100%;
   }
 }
+
+@media (max-height: 360px) {
+  .btn {
+    margin: 10px 0;
+  }
+}

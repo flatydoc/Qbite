@@ -6,7 +6,7 @@ import { Main } from "../../components/HomePage/Main/Main";
 import { Motto } from "../../components/HomePage/Motto/Motto";
 import { Numbers } from "../../components/HomePage/Numbers/Numbers";
 import { Services } from "../../components/HomePage/Services/Services";
-import styles from "./HomePage.module.scss";
+
 import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
@@ -33,7 +33,7 @@ export const HomePage = () => {
   };
 
   return (
-    <div className={styles.homePage}>
+    <>
       <Main scrollToServices={scrollToServices} scrollToForm={scrollToForm} />
       <Motto />
       <Services servicesRef={servicesRef} />
@@ -41,6 +41,6 @@ export const HomePage = () => {
       <Promotion scrollToForm={scrollToForm} />
       <About />
       <Feedback state={state.feedback} formRef={formRef} />
-    </div>
+    </>
   );
 };

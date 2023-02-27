@@ -4,12 +4,8 @@
   display: flex;
   flex-direction: column;
 
-  padding: 25px 100px;
-  height: calc(100vh - 100px);
-
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
+  padding: 55px 100px 25px 100px;
+  height: calc(100vh - 70px);
 }
 
 .title {
@@ -46,13 +42,13 @@
 
 @media (max-width: 768px) {
   .main {
-    padding: 25px 50px;
+    padding: 55px 50px 25px 50px;
   }
 }
 
 @media (max-height: 576px) {
   .main {
-    padding: 25px 50px;
+    padding: 55px 50px 25px 50px;
   }
   .title {
     font-size: 30px;
@@ -70,21 +66,29 @@
   .title {
     font-size: 30px;
   }
+  .subtitle {
+    margin: 10px 0;
+
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
 @media (max-width: 360px) {
   .main {
-    padding: 25px 20px;
+    padding: 55px 20px 25px 20px;
   }
 }
 
 @media (max-height: 360px) {
   .main {
-    padding: 10px 50px 0 50px;
-    height: calc(100vh - 70px);
+    padding: 20px 50px 0 50px;
   }
   .title {
     font-size: 20px;
     line-height: 30px;
+  }
+  .icon {
+    font-size: 20px;
   }
 }

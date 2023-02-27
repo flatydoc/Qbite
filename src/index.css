@@ -8,6 +8,7 @@
 @import "primereact/resources/themes/lara-light-indigo/theme.css";
 @import "primereact/resources/primereact.min.css";
 @import "primeicons/primeicons.css";
+@import "react-vertical-timeline-component/style.min.css";
 
 body {
   margin: 0;
@@ -25,11 +26,6 @@ body {
 .slick-dots li.slick-active button:before {
   color: var(--blue);
   font-size: 10px;
-}
-
-.p-scrolltop {
-  color: red;
-  background-color: red;
 }
 
 .visually-hidden {

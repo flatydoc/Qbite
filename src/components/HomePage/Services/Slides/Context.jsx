@@ -41,7 +41,7 @@ export const Context = (props) => {
         <p className={styles.footnote}>
           * Средний чек – это средняя стоимость товара/услуги
         </p>
-        <Button type={"button"} to={"context"} btnText={"ПОДРОБНЕЕ"} />
+        <Button type="link" to="context" btnText="ПОДРОБНЕЕ" />
       </div>
     </div>
   );

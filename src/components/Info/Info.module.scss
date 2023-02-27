@@ -1,11 +1,10 @@
 .info {
   padding: 50px 100px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4) inset;
+  height: 1000px;
 }
 
 .title {
-  position: relative;
-
   margin-bottom: 20px;
 
   font-weight: 600;
@@ -13,17 +12,6 @@
   color: var(--blue);
   text-align: center;
   text-transform: uppercase;
-
-  &::after {
-    content: "?";
-    position: absolute;
-    top: -25px;
-    right: -50px;
-
-    color: var(--pink);
-    font-size: 140px;
-    opacity: 0.2;
-  }
 }
 
 .content {
@@ -36,13 +24,6 @@
   .info {
     padding: 50px;
   }
-
-  .title {
-    &::after {
-      top: -25px;
-      right: -25px;
-    }
-  }
 }
 
 @media (max-width: 576px) {
@@ -52,9 +33,24 @@
 
   .title {
     font-size: 20px;
-    &::after {
-      top: -12.5px;
-      right: -12.5px;
-    }
   }
 }
+
+// .line {
+//   position: absolute;
+
+//   top: 0;
+//   left: 50%;
+//   margin-left: -2px;
+
+//   width: 4px;
+//   max-height: 100%;
+//   background: red;
+// }
+
+// @media (max-width: 1169px) {
+//   .line {
+//     left: 18px;
+//     margin-left: 0;
+//   }
+// }

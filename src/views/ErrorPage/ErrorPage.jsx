@@ -36,16 +36,18 @@ export const ErrorPage = () => {
 
       transition: {
         type: "spring",
-        mass: 0.6,
+        mass: 0.1,
       },
     },
     btn: {
       x: mouseXPosition,
       y: mouseYPosition,
+
       boxShadow: "0px 0px 80px 50px rgba(5, 217, 232, 0.4)",
+
       transition: {
         type: "spring",
-        mass: 0.6,
+        mass: 0.1,
       },
     },
   };
@@ -75,7 +77,7 @@ export const ErrorPage = () => {
           Page not found
         </p>
         <div onMouseEnter={btnEnter} onMouseLeave={btnLeave}>
-          <Button type={"button"} to={"/"} btnText={"НА ГЛАВНУЮ"} />
+          <Button type="link" to="/" btnText="НА ГЛАВНУЮ" />
         </div>
       </div>
       <motion.div

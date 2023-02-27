@@ -4,8 +4,6 @@ import { Stages } from "../../components/Stages/Stages";
 import { Faq } from "../../components/Faq/Faq";
 import { Info } from "../../components/Info/Info";
 
-import styles from "./ContextPage.module.scss";
-
 import image from "../../assets/images/context_main.webp";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
@@ -97,13 +95,13 @@ export const ContextPage = () => {
   };
 
   return (
-    <div className={styles.contextPage}>
+    <>
       <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
       <Feedback state={state.feedback} formRef={formRef} />
-    </div>
+    </>
   );
 };

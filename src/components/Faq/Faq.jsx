@@ -7,7 +7,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 
-export const Faq = (props) => {
+export const Faq = ({ questions }) => {
   return (
     <section className={styles.faq}>
       <h2 className={`${styles.title} notranslate`}>F.A.Q.</h2>
@@ -16,7 +16,7 @@ export const Faq = (props) => {
         allowZeroExpanded
         className={styles.accordion}
       >
-        {props.questions.map((question, index) => (
+        {questions.map((question, index) => (
           <AccordionItem
             uuid={`${question.id}`}
             key={index}

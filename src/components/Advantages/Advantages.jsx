@@ -1,18 +1,18 @@
 import styles from "./Advantages.module.scss";
 
-export const Advantages = (props) => {
+export const Advantages = ({ state }) => {
   return (
     <section className={styles.advantages}>
       <div className={styles.headBlock}>
         <h3 className={styles.title}>
-          <span className={styles.blue}>{props.state.items.length}</span>
+          <span className={styles.blue}>{state.items.length}</span>
           <br />
-          {props.state.title}
+          {state.title}
         </h3>
-        <p className={styles.subtitle}>{props.state.subtitle}</p>
+        <p className={styles.subtitle}>{state.subtitle}</p>
       </div>
       <div className={styles.wrapper}>
-        {props.state.items.map((item, index) => (
+        {state.items.map((item, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.content}>
               <h4 className={styles.cardTitle}>

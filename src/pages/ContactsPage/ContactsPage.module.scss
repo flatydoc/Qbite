@@ -1,5 +1,5 @@
 .contactsPage {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
 
   background: linear-gradient(
       180deg,
@@ -10,10 +10,4 @@
 
   background-size: cover;
   background-position: center;
-}
-
-@media (max-height: 360px) {
-  .contactsPage {
-    height: calc(100vh - 70px);
-  }
 }

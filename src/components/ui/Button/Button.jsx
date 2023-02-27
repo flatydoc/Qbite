@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./Button.module.scss";
 import classNames from "classnames";
 
-export const Button = (props) => {
+export const Button = ({ to, type, isLoading, btnText, event }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -11,23 +11,23 @@ export const Button = (props) => {
 
   return (
     <>
-      {props.to ? (
-        <NavLink onClick={scrollToTop} className={styles.btn} to={props.to}>
-          <p className={styles.btnText}>{props.btnText}</p>
+      {type === "link" ? (
+        <NavLink onClick={scrollToTop} className={styles.btn} to={to}>
+          <p className={styles.btnText}>{btnText}</p>
         </NavLink>
-      ) : props.type === "submit" ? (
+      ) : type === "submit" ? (
         <button
-          disabled={props.isLoading ? true : false}
+          disabled={isLoading ? true : false}
           type="submit"
-          className={classNames(styles.formBtn, styles.btn, {
-            [styles.loading]: props.isLoading,
+          className={classNames(styles.btn, styles.formBtn, {
+            [styles.loading]: isLoading,
           })}
         >
-          <p className={styles.btnText}>{props.btnText}</p>
+          <p className={styles.btnText}>{btnText}</p>
         </button>
       ) : (
-        <button type="button" onClick={props.event} className={styles.btn}>
-          <p className={styles.btnText}>{props.btnText}</p>
+        <button type="button" onClick={event} className={styles.btn}>
+          <p className={styles.btnText}>{btnText}</p>
         </button>
       )}
     </>

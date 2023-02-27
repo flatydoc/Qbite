@@ -4,8 +4,6 @@ import { Stages } from "../../components/Stages/Stages";
 import { Faq } from "../../components/Faq/Faq";
 import { Info } from "../../components/Info/Info";
 
-import styles from "./SeoPage.module.scss";
-
 import image from "../../assets/images/seo_main.jpg";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
@@ -96,13 +94,13 @@ export const SeoPage = () => {
   };
 
   return (
-    <div className={styles.seoPage}>
+    <>
       <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
       <Feedback state={state.feedback} formRef={formRef} />
-    </div>
+    </>
   );
 };

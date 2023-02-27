@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: column;
 
-  padding: 25px 100px;
-  height: calc(100vh - 100px);
+  padding: 55px 100px 25px;
+
+  height: calc(100vh - 70px);
 
   background: linear-gradient(
       180deg,
@@ -121,7 +122,7 @@
 
 @media (max-width: 768px) {
   .main {
-    padding: 25px 50px;
+    padding: 55px 50px 25px 50px;
   }
 }
 
@@ -130,7 +131,7 @@
     display: none;
   }
   .main {
-    padding: 25px 50px;
+    padding: 55px 50px 25px 50px;
   }
   .title {
     font-size: 30px;
@@ -158,7 +159,7 @@
 
 @media (max-width: 360px) {
   .main {
-    padding: 25px 20px;
+    padding: 55px 20px 25px 20px;
   }
   .btnWrapper {
     margin: 50px 0 70px 0;
@@ -170,7 +171,11 @@
 
 @media (max-height: 360px) {
   .main {
-    height: calc(100vh - 70px);
+    padding: 20px 50px 0 50px;
+  }
+
+  .btn {
+    margin: 10px 0 0 35px;
   }
 
   .subtitle {

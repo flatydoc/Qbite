@@ -4,7 +4,7 @@
   justify-content: space-between;
 
   padding: 0 50px;
-  height: 100px;
+  height: 70px;
   background-color: #000;
 }
 
@@ -89,11 +89,5 @@
   .logoText {
     font-size: 15px;
     line-height: 15px;
-  }
-}
-
-@media (max-height: 360px) {
-  .header {
-    height: 70px;
   }
 }

@@ -9,7 +9,7 @@ import { Target } from "./Slides/Target";
 import { useRef, useState } from "react";
 import classNames from "classnames";
 
-export const Services = (props) => {
+export const Services = ({ servicesRef }) => {
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const settings = {
@@ -23,7 +23,6 @@ export const Services = (props) => {
     autoplaySpeed: 2000,
     pauseOnHover: true,
     pauseOnDotsHover: true,
-    adaptiveHeight: true,
   };
 
   const sliderRef = useRef();
@@ -44,7 +43,7 @@ export const Services = (props) => {
   ];
 
   return (
-    <section ref={props.servicesRef} className={styles.services}>
+    <section ref={servicesRef} className={styles.services}>
       <h2 className={styles.title}>НАШИ УСЛУГИ</h2>
       <nav ref={currentRef} className={styles.nav}>
         {links.map((link, index) => (

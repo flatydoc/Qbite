@@ -39,7 +39,7 @@ export const Seo = (props) => {
           органически и без оплаты рекламы. Для этого мы поддерживаем результаты
           и позиции, которых удалось достичь.
         </p>
-        <Button type={"button"} to={"seo"} btnText={"ПОДРОБНЕЕ"} />
+        <Button type="link" to="seo" btnText="ПОДРОБНЕЕ" />
       </div>
     </div>
   );
