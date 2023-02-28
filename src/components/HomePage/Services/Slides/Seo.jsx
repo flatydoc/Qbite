@@ -2,8 +2,19 @@ import styles from "./Slide.module.scss";
 import { Button } from "../../../ui/Button/Button";
 
 import image from "../../../../assets/images/seo.svg";
+import { useNavigate } from "react-router-dom";
 
-export const Seo = (props) => {
+export const Seo = () => {
+  let navigate = useNavigate();
+
+  const routeChange = () => {
+    navigate("seo");
+
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <div className={styles.slide}>
       <img className={styles.img} src={image} alt="SEO" />
@@ -39,7 +50,7 @@ export const Seo = (props) => {
           органически и без оплаты рекламы. Для этого мы поддерживаем результаты
           и позиции, которых удалось достичь.
         </p>
-        <Button type="link" to="seo" btnText="ПОДРОБНЕЕ" />
+        <Button event={routeChange} btnText="ПОДРОБНЕЕ" />
       </div>
     </div>
   );

@@ -7,28 +7,22 @@ import { Modal } from "../Modal/Modal";
 import { BurgerBtn } from "../ui/BurgerBtn/BurderBtn";
 import classNames from "classnames";
 
-let x = 0;
-
-// window.addEventListener("scroll", handleScroll, true);
-
 export const Header = () => {
   const [modalActive, setModalActive] = useState(false);
-  // const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(0);
 
   const modalActiveHandler = () => {
     setModalActive(!modalActive);
   };
 
-  // const handleScroll = () => {
-  //   setScroll(window.scrollY);
-  //   // x++;
-  //   // console.log(`vhghvgvhgvvgh`, x);
-  // };
+  const handleScroll = () => {
+    setScroll(window.scrollY);
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll, true);
-  //   return () => window.removeEventListener("scroll", handleScroll, true);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -47,9 +41,10 @@ export const Header = () => {
   return (
     <>
       <header
-      // className={classNames(styles.header, {
-      //   [styles.scrolled]: scroll > 50,
-      // })}
+        className={classNames(styles.header, {
+          [styles.scrolled]: scroll > 50,
+        })}
+        // className={styles.header}
       >
         <NavLink to="/" onClick={scrollToTop}>
           <h2 className={styles.logo}>
@@ -66,7 +61,7 @@ export const Header = () => {
           ))}
         </nav>
         <BurgerBtn
-          // scrolled={scroll > 50 ? true : false}
+          scrolled={scroll > 50 ? true : false}
           event={modalActiveHandler}
           modalStatus={modalActive}
         />

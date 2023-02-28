@@ -1,9 +1,20 @@
 import styles from "./Slide.module.scss";
 import { Button } from "../../../ui/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 import image from "../../../../assets/images/context.svg";
 
-export const Context = (props) => {
+export const Context = () => {
+  let navigate = useNavigate();
+
+  const routeChange = () => {
+    navigate("context");
+
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <div className={styles.slide}>
       <img className={styles.img} src={image} alt="Context" />
@@ -41,7 +52,7 @@ export const Context = (props) => {
         <p className={styles.footnote}>
           * Средний чек – это средняя стоимость товара/услуги
         </p>
-        <Button type="link" to="context" btnText="ПОДРОБНЕЕ" />
+        <Button event={routeChange} btnText="ПОДРОБНЕЕ" />
       </div>
     </div>
   );

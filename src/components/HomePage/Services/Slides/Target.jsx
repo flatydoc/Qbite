@@ -2,8 +2,19 @@ import styles from "./Slide.module.scss";
 import { Button } from "../../../ui/Button/Button";
 
 import image from "../../../../assets/images/target.svg";
+import { useNavigate } from "react-router-dom";
 
-export const Target = (props) => {
+export const Target = () => {
+  let navigate = useNavigate();
+
+  const routeChange = () => {
+    navigate("target");
+
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <div className={styles.slide}>
       <img className={styles.img} src={image} alt="Target" />
@@ -42,7 +53,7 @@ export const Target = (props) => {
           Мы продадим для вас все, что покупают в интернете! Оставьте заявку, и
           мы посчитаем бюджет.
         </p>
-        <Button type="link" to="target" btnText="ПОДРОБНЕЕ" />
+        <Button event={routeChange} btnText="ПОДРОБНЕЕ" />
       </div>
     </div>
   );

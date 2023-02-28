@@ -2,8 +2,19 @@ import styles from "./Slide.module.scss";
 import { Button } from "../../../ui/Button/Button";
 
 import image from "../../../../assets/images/development.svg";
+import { useNavigate } from "react-router-dom";
 
 export const Development = (props) => {
+  let navigate = useNavigate();
+
+  const routeChange = () => {
+    navigate("development");
+
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <div className={styles.slide}>
       <img className={styles.img} src={image} alt="Development" />
@@ -41,7 +52,7 @@ export const Development = (props) => {
             интернете
           </li>
         </ul>
-        <Button type="link" to="development" btnText="ПОДРОБНЕЕ" />
+        <Button event={routeChange} btnText="ПОДРОБНЕЕ" />
       </div>
     </div>
   );

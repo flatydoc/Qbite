@@ -17,14 +17,27 @@
 }
 
 .title {
-  padding-right: 20px;
-  border-right: 1px solid #fff;
-
+  position: relative;
+  margin-right: 20px;
+  // padding-right: 20px;
+  // border-right: 1px solid #fff;
+  width: 50%;
   font-size: 30px;
   line-height: 140%;
   color: var(--light);
   font-weight: 600;
   text-align: end;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+
+    background-color: #fff;
+    top: 0;
+    right: -21px;
+  }
 }
 
 .blue {
@@ -33,7 +46,7 @@
 
 .subtitle {
   margin-left: 20px;
-
+  width: 50%;
   font-size: 15px;
   line-height: 140%;
   color: #fff;
@@ -56,15 +69,21 @@
     text-align: center;
   }
   .title {
-    padding-right: 0;
+    width: 100%;
+    margin-right: 0;
     padding-bottom: 20px;
-    border-right: none;
-    border-bottom: 1px solid #fff;
+
+    border-bottom: 2px solid #fff;
 
     text-align: center;
+
+    &::after {
+      display: none;
+    }
   }
 
   .subtitle {
+    width: 100%;
     margin-left: 0;
     margin-top: 20px;
   }

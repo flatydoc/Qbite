@@ -1,35 +1,21 @@
-import { NavLink } from "react-router-dom";
 import styles from "./Button.module.scss";
 import classNames from "classnames";
 
-export const Button = ({ to, type, isLoading, btnText, event }) => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-    });
-  };
-
+export const Button = ({ type, isLoading, btnText, event }) => {
   return (
-    <>
-      {type === "link" ? (
-        <NavLink onClick={scrollToTop} className={styles.btn} to={to}>
-          <p className={styles.btnText}>{btnText}</p>
-        </NavLink>
-      ) : type === "submit" ? (
-        <button
-          disabled={isLoading ? true : false}
-          type="submit"
-          className={classNames(styles.btn, styles.formBtn, {
-            [styles.loading]: isLoading,
-          })}
-        >
-          <p className={styles.btnText}>{btnText}</p>
-        </button>
-      ) : (
-        <button type="button" onClick={event} className={styles.btn}>
-          <p className={styles.btnText}>{btnText}</p>
-        </button>
+    <button
+      type={type === "submit" ? "submit" : "button"}
+      disabled={isLoading ? true : false}
+      onClick={event}
+      className={classNames(
+        styles.btn,
+        {
+          [styles.loading]: isLoading,
+        },
+        { [styles.formBtn]: type === "submit" }
       )}
-    </>
+    >
+      <p className={styles.btnText}>{btnText}</p>
+    </button>
   );
 };
