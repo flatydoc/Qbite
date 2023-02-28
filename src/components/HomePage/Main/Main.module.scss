@@ -122,7 +122,7 @@
 
 @media (max-width: 768px) {
   .main {
-    padding: 55px 50px 25px 50px;
+    padding: 55px 50px 25px;
   }
 }
 
@@ -131,7 +131,7 @@
     display: none;
   }
   .main {
-    padding: 55px 50px 25px 50px;
+    padding: 55px 50px 25px;
   }
   .title {
     font-size: 30px;
@@ -159,7 +159,7 @@
 
 @media (max-width: 360px) {
   .main {
-    padding: 55px 20px 25px 20px;
+    padding: 55px 20px 25px;
   }
   .btnWrapper {
     margin: 50px 0 70px 0;
@@ -171,7 +171,7 @@
 
 @media (max-height: 360px) {
   .main {
-    padding: 20px 50px 0 50px;
+    padding: 20px 50px 0;
   }
 
   .btn {

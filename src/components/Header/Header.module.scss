@@ -6,6 +6,18 @@
   padding: 0 50px;
   height: 70px;
   background-color: #000;
+  position: sticky;
+  top: 0;
+}
+
+.scrolled {
+  z-index: 1000;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+
+  .nav {
+    display: none;
+  }
 }
 
 .logo {
@@ -30,51 +42,9 @@
   display: flex;
 }
 
-.burgerBtn {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding: 15px 10px;
-  width: 60px;
-  height: 60px;
-
-  overflow: hidden;
-
-  div {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    transition: all 1s;
-  }
-
-  &:hover div {
-    background-color: var(--blue);
-  }
-}
-
-.active {
-  div:nth-child(2) {
-    transform: translateX(100px);
-  }
-  div:nth-child(1) {
-    left: 15px;
-    transform: rotate(45deg) translateY(20px);
-  }
-
-  div:nth-child(3) {
-    left: 15px;
-    transform: rotate(-45deg) translateY(-20px);
-  }
-}
-
 @media (max-width: 900px) {
   .nav {
     display: none;
-  }
-  .burgerBtn {
-    display: flex;
   }
 }
 

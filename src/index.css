@@ -28,6 +28,15 @@ body {
   font-size: 10px;
 }
 
+.vertical-timeline-element-content {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.vertical-timeline-element-content p {
+  margin: 0;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;

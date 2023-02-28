@@ -2,15 +2,38 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/icons/logo.svg";
 import styles from "./Header.module.scss";
 import { Link } from "../ui/Link/Link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Modal } from "../Modal/Modal";
 import { BurgerBtn } from "../ui/BurgerBtn/BurderBtn";
+import classNames from "classnames";
+
+let x = 0;
+
+// window.addEventListener("scroll", handleScroll, true);
 
 export const Header = () => {
   const [modalActive, setModalActive] = useState(false);
+  // const [scroll, setScroll] = useState(0);
 
   const modalActiveHandler = () => {
     setModalActive(!modalActive);
+  };
+
+  // const handleScroll = () => {
+  //   setScroll(window.scrollY);
+  //   // x++;
+  //   // console.log(`vhghvgvhgvvgh`, x);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll, true);
+  //   return () => window.removeEventListener("scroll", handleScroll, true);
+  // }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   const links = [
@@ -23,8 +46,12 @@ export const Header = () => {
 
   return (
     <>
-      <header className={styles.header}>
-        <NavLink to="/">
+      <header
+      // className={classNames(styles.header, {
+      //   [styles.scrolled]: scroll > 50,
+      // })}
+      >
+        <NavLink to="/" onClick={scrollToTop}>
           <h2 className={styles.logo}>
             <img className={styles.logoImg} src={logo} alt="Quantum logo" />
             <p className={styles.logoText}>
@@ -38,7 +65,11 @@ export const Header = () => {
             <Link key={index} to={link.to} text={link.text} />
           ))}
         </nav>
-        <BurgerBtn event={modalActiveHandler} modalStatus={modalActive} />
+        <BurgerBtn
+          // scrolled={scroll > 50 ? true : false}
+          event={modalActiveHandler}
+          modalStatus={modalActive}
+        />
       </header>
       <Modal isActive={modalActive} setIsActive={setModalActive} />
     </>

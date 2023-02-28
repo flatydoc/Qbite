@@ -1,5 +1,5 @@
 .services {
-  padding: 50px 100px;
+  padding: 70px 100px 50px;
 }
 
 .title {
@@ -34,7 +34,7 @@
   cursor: pointer;
 
   .linkTitle {
-    color: var(--light);
+    color: #fff;
 
     transition-property: color;
     transition-delay: 0.4s;
@@ -69,7 +69,7 @@
   border-bottom: 2px solid var(--blue);
 
   .linkTitle {
-    color: #fff;
+    color: var(--blue);
   }
 }
 
@@ -93,13 +93,13 @@
 
 @media (max-width: 768px) {
   .services {
-    padding: 50px;
+    padding: 70px 50px 50px;
   }
 }
 
 @media (max-width: 576px) {
   .services {
-    padding: 25px;
+    padding: 70px 25px 25px;
   }
   .title {
     text-align: center;
@@ -113,4 +113,7 @@
 }
 
 @media (max-width: 360px) {
+  .services {
+    padding: 70px 15px 25px;
+  }
 }

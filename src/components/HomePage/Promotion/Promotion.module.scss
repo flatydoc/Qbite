@@ -54,3 +54,9 @@
     line-height: 30px;
   }
 }
+
+@media (max-width: 360px) {
+  .promotion {
+    padding: 25px 15px;
+  }
+}

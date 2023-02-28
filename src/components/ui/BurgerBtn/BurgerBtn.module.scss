@@ -33,6 +33,10 @@
   }
 }
 
+.scrolled {
+  display: block;
+}
+
 .active {
   div:nth-child(2) {
     opacity: 0;

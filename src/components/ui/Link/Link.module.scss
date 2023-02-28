@@ -7,6 +7,7 @@
 
   margin: 0 10px;
 
+  border-bottom: 1px solid transparent;
   outline: none;
 
   color: #fff;
@@ -42,4 +43,5 @@
 
 .active {
   color: var(--blue);
+  border-bottom: 1px solid var(--blue);
 }

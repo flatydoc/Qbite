@@ -14,7 +14,7 @@ export const ContextPage = () => {
 
   const state = {
     main: {
-      title: "Профессиональная настройка контекстной рекламы",
+      title: "Настройка контекстной рекламы",
       image,
     },
 

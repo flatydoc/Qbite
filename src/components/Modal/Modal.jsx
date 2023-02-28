@@ -19,6 +19,12 @@ export const Modal = ({ isActive, setIsActive }) => {
     { id: 5, to: "contacts", title: "КОНТАКТЫ" },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <div
       onClick={() => setIsActive(false)}
@@ -29,6 +35,7 @@ export const Modal = ({ isActive, setIsActive }) => {
       <div className={styles.content}>
         {items.map((item, index) => (
           <NavLink
+            onClick={scrollToTop}
             key={index}
             to={item.to}
             className={`${styles.link} ${styles[item.to]}`}

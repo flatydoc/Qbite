@@ -46,6 +46,9 @@
 }
 
 @media (max-width: 576px) {
+  .motto {
+    padding: 25px 20px;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -69,7 +72,7 @@
 
 @media (max-width: 360px) {
   .motto {
-    padding: 25px 20px;
+    padding: 25px 15px;
   }
   .title {
     font-size: 20px;
