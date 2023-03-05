@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Qbite/static/css/main.1421fcbe.css",
-    "main.js": "/Qbite/static/js/main.6608c3dd.js",
+    "main.css": "/Qbite/static/css/main.bbd65396.css",
+    "main.js": "/Qbite/static/js/main.78d64220.js",
     "static/media/stages.jpg": "/Qbite/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/error_page.jpg": "/Qbite/static/media/error_page.eb981f37e407d5a3a24b.jpg",
     "static/media/seo_main.jpg": "/Qbite/static/media/seo_main.130f7cd9e35a210af7dc.jpg",
@@ -34,11 +34,11 @@
     "static/media/slick.ttf": "/Qbite/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Qbite/static/media/slick.295183786cd8a1389865.woff",
     "static/media/cross.svg": "/Qbite/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.1421fcbe.css.map": "/Qbite/static/css/main.1421fcbe.css.map",
-    "main.6608c3dd.js.map": "/Qbite/static/js/main.6608c3dd.js.map"
+    "main.bbd65396.css.map": "/Qbite/static/css/main.bbd65396.css.map",
+    "main.78d64220.js.map": "/Qbite/static/js/main.78d64220.js.map"
   },
   "entrypoints": [
-    "static/css/main.1421fcbe.css",
-    "static/js/main.6608c3dd.js"
+    "static/css/main.bbd65396.css",
+    "static/js/main.78d64220.js"
   ]
 }
