@@ -1,5 +1,5 @@
 import styles from "./About.module.scss";
-import image from "../../../assets/images/about.svg";
+import image from "../../../assets/images/rating.svg";
 
 export const About = () => {
   return (

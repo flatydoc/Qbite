@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HashRouter } from "react-router-dom";
-import { FormContext } from "./core/context/FormContext";
+// import { FormContext } from "./core/context/FormContext";
 
 import { Layout } from "./views/Layout/Layout";
 import { ErrorPage } from "./views/ErrorPage/ErrorPage";
@@ -27,24 +27,24 @@ export const App = () => {
 
   return (
     !isLoading && (
-      <FormContext.Provider>
-        <HashRouter>
-          <>
-            <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route index element={<HomePage />} />
-                <Route path="contacts" element={<ContactsPage />} />
-                <Route path="development" element={<DevelopmentPage />} />
-                <Route path="context" element={<ContextPage />} />
-                <Route path="seo" element={<SeoPage />} />
-                <Route path="target" element={<TargetPage />} />
-                <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
-              </Route>
-              <Route path="/*" element={<ErrorPage />} />
-            </Routes>
-          </>
-        </HashRouter>
-      </FormContext.Provider>
+      // <FormContext.Provider>
+      <HashRouter>
+        <>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<HomePage />} />
+              <Route path="contacts" element={<ContactsPage />} />
+              <Route path="development" element={<DevelopmentPage />} />
+              <Route path="context" element={<ContextPage />} />
+              <Route path="seo" element={<SeoPage />} />
+              <Route path="target" element={<TargetPage />} />
+              <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+            </Route>
+            <Route path="/*" element={<ErrorPage />} />
+          </Routes>
+        </>
+      </HashRouter>
+      // </FormContext.Provider>
     )
   );
 };

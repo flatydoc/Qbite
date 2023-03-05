@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const SeoPage = () => {
-  useDocumentTitle("Quantum | SEO-продвижение");
+  useDocumentTitle("Qbite | SEO-продвижение");
 
   const state = {
     main: {

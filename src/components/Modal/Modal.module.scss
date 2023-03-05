@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: 1000;
 
   display: flex;
   align-items: center;
@@ -48,18 +48,18 @@
 
     color: #fff;
 
-    background-size: contain;
+    background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--background);
 
-    filter: grayscale(100%);
+    // filter: grayscale(100%);
     transition: all 0.5s;
 
     &:hover {
       transform: scale(105%);
-
-      filter: grayscale(0);
+      background-color: rgb(32, 32, 32);
+      // filter: grayscale(0);
 
       .title {
         transform: translate(20px);
@@ -86,8 +86,7 @@
 
   .contacts {
     grid-area: contacts;
-    background-image: url(../../assets/images/contacts.jpg);
-    background-position-y: 55%;
+    background-image: url(../../assets/images/contacts.svg);
   }
 }
 
@@ -114,11 +113,13 @@
   .content {
     display: block;
     padding: 70px 20px;
-  }
 
-  .link {
-    margin: 20px;
-    height: 200px;
+    .link {
+      margin: 20px;
+      height: 200px;
+
+      background-size: 40%;
+    }
   }
 }
 

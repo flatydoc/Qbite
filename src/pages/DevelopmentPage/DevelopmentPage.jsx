@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const DevelopmentPage = () => {
-  useDocumentTitle("Quantum | Разработка сайтов и веб-приложений");
+  useDocumentTitle("Qbite | Разработка сайтов и веб-приложений");
 
   const state = {
     main: {

@@ -1,5 +1,5 @@
 .services {
-  padding: 70px 100px 50px;
+  padding: 50px 100px;
 }
 
 .title {
@@ -80,6 +80,31 @@
   color: #fff;
 }
 
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+  padding-top: 10px;
+}
+
+.arrowBtn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(110%);
+    border-color: var(--blue);
+  }
+
+  &:first-child {
+    margin-right: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .nav {
     grid-template-columns: 1fr 1fr;
@@ -93,13 +118,13 @@
 
 @media (max-width: 768px) {
   .services {
-    padding: 70px 50px 50px;
+    padding: 50px;
   }
 }
 
 @media (max-width: 576px) {
   .services {
-    padding: 70px 25px 25px;
+    padding: 25px 25px;
   }
   .title {
     text-align: center;
@@ -114,6 +139,8 @@
 
 @media (max-width: 360px) {
   .services {
-    padding: 70px 15px 25px;
+    padding: 25px 15px 25px;
+  }
+  .arrows {
   }
 }

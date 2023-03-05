@@ -8,7 +8,11 @@ export const Stages = ({ state }) => {
   return (
     <section className={styles.stages}>
       <h2 className={styles.title}>{state.title}</h2>
-      <VerticalTimeline className={styles.wrapper} lineColor={"#acb4c3"}>
+      <VerticalTimeline
+        className={styles.wrapper}
+        animate={false}
+        lineColor={"#acb4c3"}
+      >
         {/* <span id="myBar" className={styles.progress}></span> */}
         {state.items.map((item, index) => (
           <VerticalTimelineElement

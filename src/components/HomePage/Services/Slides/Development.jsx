@@ -4,7 +4,7 @@ import { Button } from "../../../ui/Button/Button";
 import image from "../../../../assets/images/development.svg";
 import { useNavigate } from "react-router-dom";
 
-export const Development = (props) => {
+export const Development = () => {
   let navigate = useNavigate();
 
   const routeChange = () => {

@@ -53,11 +53,7 @@
 
 @media (max-width: 1024px) {
   .img {
-    width: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0.2;
+    display: none;
   }
   .list {
     margin: 20px 0 20px 0;
@@ -79,9 +75,7 @@
   .about {
     padding: 25px;
   }
-  .img {
-    width: 70%;
-  }
+
   .title {
     text-align: center;
     font-size: 30px;

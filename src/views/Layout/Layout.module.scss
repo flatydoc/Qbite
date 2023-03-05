@@ -1,8 +1,11 @@
 .wrapper {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(53, 57, 68, 1) 100%
-  );
-  background-attachment: fixed;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(0, 0, 0, 1) 0%,
+  //   rgba(53, 57, 68, 1) 100%
+  // );
+  // background-attachment: fixed;
+  background-image: url(../../assets/icons/bg.svg);
+  background-size: cover;
+  background-position: center;
 }

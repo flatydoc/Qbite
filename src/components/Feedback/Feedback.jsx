@@ -25,6 +25,13 @@ export const Feedback = (props) => {
     }, 1000);
   };
 
+  // let uri = window.location.href.split("?");
+  // let utms = uri.filter(() => {
+  //   "?";
+  // });
+
+  let utms = "test";
+
   const showSuccess = () => {
     toast.current.show({
       severity: "success",
@@ -39,7 +46,8 @@ export const Feedback = (props) => {
     toast.current.show({
       severity: "error",
       summary: "Ошибка",
-      detail: "Проверьте качество сетевого соединения и повторите попытку",
+      detail:
+        "Повторите попытку позже, или свяжитесь с нами удобным для Вас способом",
     });
   };
 
@@ -55,6 +63,7 @@ export const Feedback = (props) => {
     phone: "",
     text: "",
     option: {},
+    utms,
   };
 
   const {

@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const ContextPage = () => {
-  useDocumentTitle("Quantum | Контекстная реклама");
+  useDocumentTitle("Qbite | Контекстная реклама");
 
   const state = {
     main: {

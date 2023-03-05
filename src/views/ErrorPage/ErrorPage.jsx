@@ -7,7 +7,7 @@ import { Button } from "../../components/ui/Button/Button";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const ErrorPage = () => {
-  useDocumentTitle("Quantum | 404");
+  useDocumentTitle("Qbite | 404");
 
   const [cursorVariant, setCursorVariant] = useState("default");
 

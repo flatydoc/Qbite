@@ -12,7 +12,6 @@
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;
-  background-attachment: fixed;
 }
 
 .title {
@@ -43,16 +42,6 @@
     background-color: var(--green);
   }
 }
-
-// .progress {
-//   position: absolute;
-//   top: 0;
-//   left: 50%;
-//   transform: translate(-50%);
-//   width: 4px;
-//   height: 100px;
-//   background-color: red;
-// }
 
 .subtitle {
   font-size: 40px !important;

@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 export const TargetPage = () => {
-  useDocumentTitle("Quantum | Реклама в социальных сетях");
+  useDocumentTitle("Qbite | Реклама в социальных сетях");
 
   const state = {
     main: {

@@ -42,9 +42,19 @@ export const Services = ({ servicesRef }) => {
     { id: 4, title: "Реклама в социальных сетях" },
   ];
 
+  const methods = {
+    gotoNext: () => {
+      sliderRef.current.slickNext();
+    },
+    gotoPrev: () => {
+      sliderRef.current.slickPrev();
+    },
+  };
+
   return (
     <section ref={servicesRef} className={styles.services}>
       <h2 className={styles.title}>НАШИ УСЛУГИ</h2>
+
       <nav ref={currentRef} className={styles.nav}>
         {links.map((link, index) => (
           <div
@@ -60,6 +70,14 @@ export const Services = ({ servicesRef }) => {
         ))}
       </nav>
       <div ref={currentRef}></div>
+      <div className={styles.arrows}>
+        <button className={styles.arrowBtn} onClick={methods.gotoPrev}>
+          <i className="pi pi-arrow-left"></i>
+        </button>
+        <button className={styles.arrowBtn} onClick={methods.gotoNext}>
+          <i className="pi pi-arrow-right"></i>
+        </button>
+      </div>
       <Slider {...settings} ref={sliderRef}>
         <Development />
         <Context />

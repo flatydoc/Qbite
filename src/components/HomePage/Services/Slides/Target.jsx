@@ -1,7 +1,7 @@
 import styles from "./Slide.module.scss";
 import { Button } from "../../../ui/Button/Button";
-
 import image from "../../../../assets/images/target.svg";
+
 import { useNavigate } from "react-router-dom";
 
 export const Target = () => {
@@ -49,10 +49,7 @@ export const Target = () => {
             <span className={styles.blue}> от 500 BYN</span>
           </li>
         </ul>
-        <p className={styles.desc}>
-          Мы продадим для вас все, что покупают в интернете! Оставьте заявку, и
-          мы посчитаем бюджет.
-        </p>
+
         <Button event={routeChange} btnText="ПОДРОБНЕЕ" />
       </div>
     </div>

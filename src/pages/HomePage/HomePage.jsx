@@ -9,9 +9,12 @@ import { Services } from "../../components/HomePage/Services/Services";
 
 import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
+import { Consult } from "../../components/HomePage/Consult/Consult";
+
+import styles from "./HomePage.module.scss";
 
 export const HomePage = () => {
-  useDocumentTitle("Quantum - Студия веб-разработки и маркетинга");
+  useDocumentTitle("Qbite - Студия веб-разработки и маркетинга");
 
   const state = {
     feedback: {
@@ -37,9 +40,12 @@ export const HomePage = () => {
       <Main scrollToServices={scrollToServices} scrollToForm={scrollToForm} />
       <Motto />
       <Services servicesRef={servicesRef} />
+      {/* <Consult /> */}
       <Numbers />
-      <Promotion scrollToForm={scrollToForm} />
-      <About />
+      <div className={styles.wrapper}>
+        <Promotion scrollToForm={scrollToForm} />
+        <About />
+      </div>
       <Feedback state={state.feedback} formRef={formRef} />
     </>
   );

@@ -22,7 +22,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
-        <img className={styles.logo} src={logo} alt="Quantum logo" />
+        <img className={styles.logo} src={logo} alt="Qbite logo" />
 
         <nav className={styles.nav}>
           {links.map((link, index) => (
@@ -34,7 +34,7 @@ export const Footer = () => {
         <p>
           © 2020
           <NavLink className={styles.link} to="/">
-            <span> Quantum </span>
+            <span> Qbite </span>
           </NavLink>
           Все права защищены.
         </p>
