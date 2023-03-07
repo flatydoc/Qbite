@@ -31,6 +31,9 @@
   &:hover div {
     background-color: var(--blue);
   }
+  &:focus div {
+    background-color: var(--blue);
+  }
 }
 
 .active {

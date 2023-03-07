@@ -16,24 +16,6 @@
   }
 }
 
-@keyframes bounce {
-  from {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(5px);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  75% {
-    transform: translateX(5px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 @keyframes flicker {
   from {
     box-shadow: none;

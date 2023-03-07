@@ -39,6 +39,9 @@
       transition: left 0.5s;
     }
   }
+  &:focus {
+    color: var(--blue);
+  }
 }
 
 .active {

@@ -15,10 +15,7 @@ export const Advantages = ({ state }) => {
         {state.items.map((item, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.content}>
-              <h4 className={styles.cardTitle}>
-                <span className={styles.cardNumber}>{item.id}</span>
-                {item.title}
-              </h4>
+              <h4 className={styles.cardTitle}>{item.title}</h4>
               <p className={styles.cardSubtitle}>{item.subtitle}</p>
             </div>
           </div>

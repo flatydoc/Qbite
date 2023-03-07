@@ -20,7 +20,7 @@ export const Services = ({ servicesRef }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 11000,
     pauseOnHover: true,
     pauseOnDotsHover: true,
   };

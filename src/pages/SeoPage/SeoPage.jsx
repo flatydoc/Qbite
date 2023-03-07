@@ -8,6 +8,7 @@ import image from "../../assets/images/seo_main.jpg";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
+import { Cards } from "../../components/Cards/Cards";
 
 export const SeoPage = () => {
   useDocumentTitle("Qbite | SEO-продвижение");
@@ -23,6 +24,12 @@ export const SeoPage = () => {
       content:
         "Продвижение сайта (SEO) – это комплекс мероприятий, грамотное и профессиональное выполнение которого, позволяет продвинуть сайт в поисковых системах (Google, Яндекс и др.). Многие компании пренебрегают заказывать SEO оптимизацию (сео продвижение) своего сайта, тем самым, теряя большое количество клиентов. Раскрутка сайтов – отличный способ получать новых клиентов. Если SEO-специалисты смогли осуществить продвижение сайта в топ 10, то это большой шаг к увеличению вашей прибыли и узнаваемости бренда. Мы занимаемся комплексным SEO продвижением как новых (молодых) сайтов, так и тех, которые находятся не на первой странице в поисковой выдаче в Google и Яндекс. Работаем с любыми видами сайтов. Наше агентство предлагает качественное и быстрое продвижение сайтов в поисковых системах по позициям или трафику, вывод сайта в топ по низким ценам. Вы можете заказать SEO аудит сайта и получить грамотные и профессиональные рекомендации по улучшению позиций сайта в поисковых системах или заказать комплексное SEO продвижение сайтов",
     },
+
+    cards: [
+      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
+      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
+      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
+    ],
 
     advantages: {
       title: "причины заказать контекстную рекламу в нашей компании",
@@ -97,6 +104,7 @@ export const SeoPage = () => {
     <>
       <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
+      <Cards state={state.cards} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />

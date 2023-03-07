@@ -42,6 +42,9 @@
     &:hover {
       text-decoration: underline;
     }
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 

@@ -26,19 +26,21 @@ export const Development = () => {
         </p>
         <ul className={styles.list}>
           <li className={styles.listItem}>
-            Сайт-визитка –<span className={styles.blue}> от 800 BYN</span>
+            Одностраничный сайт/Landing Page –
+            <span className={styles.blue}> от 650 BYN</span>
           </li>
           <li className={styles.listItem}>
-            Одностраничный сайт/Landing Page –
+            Сайт-визитка –<span className={styles.blue}> от 650 BYN</span>
+          </li>
+          <li className={styles.listItem}>
+            Корпоративный сайт –
             <span className={styles.blue}> от 1000 BYN</span>
           </li>
           <li className={styles.listItem}>
-            Интернет-магазин –<span className={styles.blue}> от 3 200 BYN</span>
+            Сайт-каталог –<span className={styles.blue}> от 1100 BYN</span>
           </li>
-
           <li className={styles.listItem}>
-            Корпоративный сайт –
-            <span className={styles.blue}> от 3 400 BYN</span>
+            Интернет-магазин –<span className={styles.blue}> от 1500 BYN</span>
           </li>
         </ul>
         <p className={styles.subtitle}>ЧЕМ БУДЕТ ПОЛЕЗЕН ВАШ САЙТ:</p>

@@ -53,17 +53,18 @@
     background-repeat: no-repeat;
     background-color: var(--background);
 
-    // filter: grayscale(100%);
     transition: all 0.5s;
 
     &:hover {
       transform: scale(105%);
       background-color: rgb(32, 32, 32);
-      // filter: grayscale(0);
 
       .title {
         transform: translate(20px);
       }
+    }
+    &:focus {
+      background-color: rgb(32, 32, 32);
     }
   }
 
@@ -132,7 +133,6 @@
   }
 
   .link {
-    // margin: 20px;
     height: 200px;
   }
 }

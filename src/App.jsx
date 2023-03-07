@@ -12,23 +12,33 @@ import { ContextPage } from "./pages/ContextPage/ContextPage";
 import { SeoPage } from "./pages/SeoPage/SeoPage";
 import { TargetPage } from "./pages/TargetPage/TargetPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
+import styles from "./App.module.scss";
 
 export const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const spinner = document.getElementById("spinner");
+  const [isLoading, setIsLoading] = useState(false);
 
-  if (spinner) {
+  useEffect(() => {
+    setIsLoading(true);
     setTimeout(() => {
-      spinner.style.display = "none";
       setIsLoading(false);
     }, 1500);
-  }
+  }, []);
 
   return (
-    !isLoading && (
-      // <FormContext.Provider>
-      <HashRouter>
+    // <FormContext.Provider>
+    <HashRouter>
+      {isLoading ? (
+        <div className={styles.loader}>
+          <ClipLoader
+            color={"#05d9e8"}
+            loading={isLoading}
+            size={150}
+            aria-label="Loading Spinner"
+          />
+        </div>
+      ) : (
         <>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -43,8 +53,8 @@ export const App = () => {
             <Route path="/*" element={<ErrorPage />} />
           </Routes>
         </>
-      </HashRouter>
-      // </FormContext.Provider>
-    )
+      )}
+    </HashRouter>
+    // </FormContext.Provider>
   );
 };

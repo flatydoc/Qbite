@@ -8,6 +8,7 @@ import image from "../../assets/images/development_main.webp";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
+import { Cards } from "../../components/Cards/Cards";
 
 export const DevelopmentPage = () => {
   useDocumentTitle("Qbite | Разработка сайтов и веб-приложений");
@@ -23,6 +24,44 @@ export const DevelopmentPage = () => {
       content:
         "Одна из основных услуг, которую мы предлагаем, – это создание сайтов с нуля под ключ. Создание своего сайта – прекрасная возможность представить публике в Интернете свою компанию, бренд, товар или услугу и, тем самым, увеличить продажи. Специалисты нашего агентства создают веб-сайты по низким ценам, делают адаптивный дизайн сайта, чтобы он выглядел привлекательно на любых устройствах – компьютерах, планшетах и телефонах. Индивидуально подходим к каждому проекту, разрабатываем любую структуру сайта, делаем быстро и качественно. Мы разрабатываем как одностраничные, так и многостраничные сайты. Создаем сайты-визитки, лендинги, сайты-каталоги, интернет-магазины и корпоративные сайты. При необходимости, мы осуществляем доработку сайтов, созданных другими компаниями. Работаем в Минске, по всей Беларуси и странах СНГ",
     },
+
+    cards: [
+      {
+        title: "Лендинг",
+        type: "Одностраничный сайт",
+        price: "750",
+        discount: "650",
+        term: "7",
+      },
+      {
+        title: "Сайт-визитка",
+        type: "Многостраничный сайт",
+        price: "750",
+        discount: "650",
+        term: "7",
+      },
+      {
+        title: "Корпоративный сайт",
+        type: "Многостраничный сайт",
+        price: "1400",
+        discount: "1000",
+        term: "14",
+      },
+      {
+        title: "Сайт-каталог",
+        type: "Многостраничный сайт",
+        price: "1500",
+        discount: "1100",
+        term: "14",
+      },
+      {
+        title: "Интернет-магазин",
+        type: "Многостраничный сайт",
+        price: "1800",
+        discount: "1500",
+        term: "20",
+      },
+    ],
 
     advantages: {
       title: "причины заказать разработку сайта в нашей компании",
@@ -149,6 +188,7 @@ export const DevelopmentPage = () => {
     <>
       <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
+      <Cards state={state.cards} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />

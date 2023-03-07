@@ -5,9 +5,10 @@ import { classNames } from "primereact/utils";
 import { Toast } from "primereact/toast";
 import { InputText } from "primereact/inputtext";
 import { InputMask } from "primereact/inputmask";
-
+import image from "../../../assets/images/consult.svg";
 import { FormService } from "../../../core/services/form.service";
 import { Button } from "../../ui/Button/Button";
+import { NavLink } from "react-router-dom";
 
 export const Consult = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,11 +22,6 @@ export const Consult = (props) => {
       setIsLoading(false);
     }, 1000);
   };
-
-  // let uri = window.location.href.split("?");
-  // let utms = uri.filter(() => {
-  //   "?";
-  // });
 
   let utms = "test";
 
@@ -43,7 +39,8 @@ export const Consult = (props) => {
     toast.current.show({
       severity: "error",
       summary: "Ошибка",
-      detail: "Проверьте качество сетевого соединения и повторите попытку",
+      detail:
+        "Повторите попытку позже, или свяжитесь с нами удобным для Вас способом",
     });
   };
 
@@ -87,71 +84,101 @@ export const Consult = (props) => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <section className={styles.consult}>
-      <h2 className={styles.title}>Получите бесплатную консультацию</h2>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <Controller
-          name="name"
-          control={control}
-          rules={{ required: "Введите Ваше имя" }}
-          render={({ field, fieldState }) => (
-            <div className={styles.formItem}>
-              <label
-                htmlFor={field.name}
-                className={classNames({ "p-error": errors.value })}
-              ></label>
-              <span className="p-float-label">
-                <InputText
-                  id={field.name}
-                  value={field.value}
-                  className={classNames(
-                    { "p-invalid": fieldState.error },
-                    styles.input
-                  )}
-                  onChange={(e) => field.onChange(e.target.value)}
-                />
-                <label style={{ color: "#acb4c3" }} htmlFor={field.name}>
-                  Имя
-                </label>
-              </span>
-              {getFormErrorMessage(field.name)}
+      <h2 className={styles.title}>Получите бесплатную консультацию!</h2>
+      <div className={styles.wrapper}>
+        <div className={styles.formWrapper}>
+          <p className={styles.subtitle}>
+            Мы готовы предложить лучшие решения для вашего бизнеса. Оставьте
+            свои данные и мы свяжемся с вами!
+          </p>
+          <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <div className={styles.flex}>
+              <Controller
+                name="name"
+                control={control}
+                rules={{ required: "Введите Ваше имя" }}
+                render={({ field, fieldState }) => (
+                  <div className={styles.formItem}>
+                    <label
+                      htmlFor={field.name}
+                      className={classNames({ "p-error": errors.value })}
+                    ></label>
+                    <span className="p-float-label">
+                      <InputText
+                        id={field.name}
+                        value={field.value}
+                        className={classNames(
+                          { "p-invalid": fieldState.error },
+                          styles.input
+                        )}
+                        onChange={(e) => field.onChange(e.target.value)}
+                      />
+                      <label style={{ color: "#acb4c3" }} htmlFor={field.name}>
+                        Имя
+                      </label>
+                    </span>
+                    {getFormErrorMessage(field.name)}
+                  </div>
+                )}
+              />
+              <Controller
+                name="phone"
+                control={control}
+                rules={{ required: "Введите номер телефона" }}
+                render={({ field, fieldState }) => (
+                  <div className={styles.formItem}>
+                    <label
+                      htmlFor={field.phone}
+                      className={classNames({ "p-error": errors.value })}
+                    ></label>
+                    <span className="p-float-label">
+                      <InputMask
+                        className={classNames(
+                          { "p-invalid": fieldState.error },
+                          styles.input
+                        )}
+                        onChange={(e) => field.onChange(e.target.value)}
+                        id={field.phone}
+                        value={field.value}
+                        mask="+375 (99) 999-99-99"
+                      />
+                      <label style={{ color: "#acb4c3" }} htmlFor={field.phone}>
+                        Номер телефона
+                      </label>
+                    </span>
+                    {getFormErrorMessage(field.name)}
+                  </div>
+                )}
+              />
             </div>
-          )}
-        />
-        <Controller
-          name="phone"
-          control={control}
-          rules={{ required: "Введите номер телефона" }}
-          render={({ field, fieldState }) => (
-            <div className={styles.formItem}>
-              <label
-                htmlFor={field.phone}
-                className={classNames({ "p-error": errors.value })}
-              ></label>
-              <span className="p-float-label">
-                <InputMask
-                  className={classNames(
-                    { "p-invalid": fieldState.error },
-                    styles.input
-                  )}
-                  onChange={(e) => field.onChange(e.target.value)}
-                  id={field.phone}
-                  value={field.value}
-                  mask="+375 (99) 999-99-99"
-                />
-                <label style={{ color: "#acb4c3" }} htmlFor={field.phone}>
-                  Номер телефона
-                </label>
-              </span>
-              {getFormErrorMessage(field.name)}
-            </div>
-          )}
-        />
 
-        <Button isLoading={isLoading} type={"submit"} btnText={"ОТПРАВИТЬ"} />
-      </form>
-
+            <Button
+              isLoading={isLoading}
+              type={"submit"}
+              btnText={"ОТПРАВИТЬ"}
+            />
+          </form>
+          <p className={styles.notice}>
+            * Отправляя заявку, вы соглашаетесь с
+            <NavLink
+              onClick={scrollToTop}
+              className={styles.link}
+              to="/privacy-policy"
+            >
+              <span> Политикой Конфиденциальности</span>
+            </NavLink>
+          </p>
+        </div>
+        <img className={styles.img} src={image} alt="#" />
+      </div>
       <Toast ref={toast} />
     </section>
   );
