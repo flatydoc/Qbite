@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Qbite/static/css/main.3fe8c08e.css",
-    "main.js": "/Qbite/static/js/main.c176e6b6.js",
+    "main.css": "/Qbite/static/css/main.cec302be.css",
+    "main.js": "/Qbite/static/js/main.b8693509.js",
     "static/media/stages.jpg": "/Qbite/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/error_page.jpg": "/Qbite/static/media/error_page.eb981f37e407d5a3a24b.jpg",
     "static/media/seo_main.jpg": "/Qbite/static/media/seo_main.130f7cd9e35a210af7dc.jpg",
@@ -18,10 +18,10 @@
     "static/media/development.svg": "/Qbite/static/media/development.a176f1900d57f2e6188b55b5973299a6.svg",
     "static/media/primeicons.woff2": "/Qbite/static/media/primeicons.78172950b335ccdb94e2.woff2",
     "static/media/door.png": "/Qbite/static/media/door.ca54cd2c04a88a3aa597.png",
+    "static/media/contacts.svg": "/Qbite/static/media/contacts.7cfab3c05d89f63bd83e.svg",
     "static/media/target.svg": "/Qbite/static/media/target.1a24a437b8639d68a0936611bda66770.svg",
     "static/media/promotion.svg": "/Qbite/static/media/promotion.b82a9a3db85262a42d026475bcb35ac1.svg",
     "static/media/consult.svg": "/Qbite/static/media/consult.47e447cb7b001250d5c02373def54ea7.svg",
-    "static/media/contacts.svg": "/Qbite/static/media/contacts.6ff2e6c24aa810090dd2.svg",
     "static/media/seo.svg": "/Qbite/static/media/seo.24983f3284c41292cb862d20e4a95c17.svg",
     "static/media/rating.svg": "/Qbite/static/media/rating.fda870eabc6ea2d04df6c223fd16e896.svg",
     "static/media/context.svg": "/Qbite/static/media/context.8b7d8376787380a9a7b99d8421fa5600.svg",
@@ -35,11 +35,11 @@
     "static/media/slick.woff": "/Qbite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Qbite/index.html",
     "static/media/cross.svg": "/Qbite/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.3fe8c08e.css.map": "/Qbite/static/css/main.3fe8c08e.css.map",
-    "main.c176e6b6.js.map": "/Qbite/static/js/main.c176e6b6.js.map"
+    "main.cec302be.css.map": "/Qbite/static/css/main.cec302be.css.map",
+    "main.b8693509.js.map": "/Qbite/static/js/main.b8693509.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fe8c08e.css",
-    "static/js/main.c176e6b6.js"
+    "static/css/main.cec302be.css",
+    "static/js/main.b8693509.js"
   ]
 }
