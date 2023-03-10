@@ -1,0 +1,50 @@
+.warning {
+  padding: 50px 100px;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 40%;
+  margin-left: 50px;
+}
+
+.title {
+  margin-bottom: 25px;
+
+  font-size: 30px;
+}
+
+.pink {
+  color: var(--pink);
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .warning {
+    flex-direction: column;
+    padding: 50px;
+  }
+  .img {
+    width: 60%;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .warning {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .calculator {
+    padding: 25px 15px;
+  }
+}

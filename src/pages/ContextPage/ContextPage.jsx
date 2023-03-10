@@ -8,7 +8,7 @@ import image from "../../assets/images/context_main.webp";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
-import { Cards } from "../../components/Cards/Cards";
+import { Calculator } from "../../components/Calculator/Calculator";
 
 export const ContextPage = () => {
   useDocumentTitle("Qbite | Контекстная реклама");
@@ -24,12 +24,6 @@ export const ContextPage = () => {
       content:
         "Контекстная реклама – это отличный инструмент для привлечения новых клиентов. Настройка контекстной рекламы позволит повысить посещаемость вашего сайта и, соответственно, ваши продажи. Безусловно, осуществить настройку контекстной рекламы Яндекс.Директ и Гугл Адвордс может любой желающий, но сделать это правильно – единицы. Мы оказываем услуги по профессиональному запуску, настройке и ведению контекстной рекламы Google и Яндекс по низким ценам. Заказать настройку и ведение контекстной рекламы – большой шаг к увеличению ваших продаж и узнаваемости бренда или компании",
     },
-
-    cards: [
-      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
-      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
-      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
-    ],
 
     advantages: {
       title: "причины заказать контекстную рекламу в нашей компании",
@@ -105,7 +99,7 @@ export const ContextPage = () => {
     <>
       <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
-      <Cards state={state.cards} />
+      <Calculator scrollToForm={scrollToForm} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />

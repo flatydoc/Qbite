@@ -8,7 +8,8 @@ import image from "../../assets/images/target_main.jpg";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
-import { Cards } from "../../components/Cards/Cards";
+
+import { Calculator } from "../../components/Calculator/Calculator";
 
 export const TargetPage = () => {
   useDocumentTitle("Qbite | Реклама в социальных сетях");
@@ -24,12 +25,6 @@ export const TargetPage = () => {
       content:
         "Таргетированная реклама – это реклама в социальных сетях, настроенная под потенциальных клиентов по возрасту, полу, географии, интересам и т.д. и направленная на повышение продаж ваших товаров или услуг. Настройка таргетированной рекламы – это отличный способ увеличить вашу целевую аудиторию и повысить узнаваемость вашего бренда. Специалисты нашего агентства осуществляют профессиональный запуск, настройку и ведение таргетированной рекламы",
     },
-
-    cards: [
-      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
-      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
-      { title: "123", type: "123", price: "123", discount: "123", term: "123" },
-    ],
 
     advantages: {
       title: "причины заказать контекстную рекламу в нашей компании",
@@ -104,7 +99,7 @@ export const TargetPage = () => {
     <>
       <Main state={state.main} scrollToForm={scrollToForm} />
       <Info state={state.info} />
-      <Cards state={state.cards} />
+      <Calculator scrollToForm={scrollToForm} />
       <Advantages state={state.advantages} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />

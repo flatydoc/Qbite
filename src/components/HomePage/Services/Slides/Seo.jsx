@@ -24,6 +24,10 @@ export const Seo = () => {
         <p className={styles.subtitle}>СТОИМОСТЬ SEO-ПРОДВИЖЕНИЯ:</p>
         <ul className={styles.list}>
           <li className={styles.listItem}>
+            Комплексное SEO-продвижение –
+            <span className={styles.blue}> от 450 BYN</span>
+          </li>
+          <li className={styles.listItem}>
             Подготовка под SEO-оптимизацию –
             <span className={styles.blue}> от 400 BYN</span>
           </li>
