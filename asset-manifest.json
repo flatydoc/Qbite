@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Qbite/static/css/main.fb8e42b8.css",
+    "main.css": "/Qbite/static/css/main.d2a1d818.css",
     "main.js": "/Qbite/static/js/main.abbb54cb.js",
     "static/media/stages.jpg": "/Qbite/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/error_page.jpg": "/Qbite/static/media/error_page.eb981f37e407d5a3a24b.jpg",
@@ -37,11 +37,11 @@
     "static/media/slick.woff": "/Qbite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Qbite/index.html",
     "static/media/cross.svg": "/Qbite/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.fb8e42b8.css.map": "/Qbite/static/css/main.fb8e42b8.css.map",
+    "main.d2a1d818.css.map": "/Qbite/static/css/main.d2a1d818.css.map",
     "main.abbb54cb.js.map": "/Qbite/static/js/main.abbb54cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb8e42b8.css",
+    "static/css/main.d2a1d818.css",
     "static/js/main.abbb54cb.js"
   ]
 }
