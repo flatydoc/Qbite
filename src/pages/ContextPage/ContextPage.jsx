@@ -9,6 +9,7 @@ import { Feedback } from "../../components/Feedback/Feedback";
 import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 import { Calculator } from "../../components/Calculator/Calculator";
+import { Consult } from "../../components/HomePage/Consult/Consult";
 
 export const ContextPage = () => {
   useDocumentTitle("Qbite | Контекстная реклама");
@@ -101,9 +102,10 @@ export const ContextPage = () => {
       <Info state={state.info} />
       <Calculator scrollToForm={scrollToForm} />
       <Advantages state={state.advantages} />
+      <Consult formRef={formRef} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
-      <Feedback state={state.feedback} formRef={formRef} />
+      <Feedback state={state.feedback} />
     </>
   );
 };

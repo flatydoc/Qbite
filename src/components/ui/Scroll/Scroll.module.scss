@@ -1,0 +1,19 @@
+@import "../../../scss/keyframes.scss";
+
+.scroll {
+  position: absolute;
+
+  bottom: 40px;
+  right: 40px;
+
+  font-size: 20px;
+  writing-mode: vertical-rl;
+}
+
+.scrollIcon {
+  margin-top: 15px;
+
+  font-size: 20px;
+
+  animation: bounce 2s infinite ease;
+}

@@ -91,7 +91,7 @@ export const Consult = (props) => {
   };
 
   return (
-    <section className={styles.consult}>
+    <section ref={props.formRef} className={styles.consult}>
       <h2 className={styles.title}>Получите бесплатную консультацию!</h2>
       <div className={styles.wrapper}>
         <div className={styles.formWrapper}>

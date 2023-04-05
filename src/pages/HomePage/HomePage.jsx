@@ -40,13 +40,13 @@ export const HomePage = () => {
       <Main scrollToServices={scrollToServices} scrollToForm={scrollToForm} />
       <Motto />
       <Services servicesRef={servicesRef} />
-      <Consult />
+      <Consult formRef={formRef} />
       <Numbers />
       <div className={styles.wrapper}>
         <Promotion scrollToForm={scrollToForm} />
         <About />
       </div>
-      <Feedback state={state.feedback} formRef={formRef} />
+      <Feedback state={state.feedback} />
     </>
   );
 };

@@ -11,6 +11,7 @@ import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 import { Calculator } from "../../components/Calculator/Calculator";
 import { Warning } from "../../components/Warning/Warning";
+import { Consult } from "../../components/HomePage/Consult/Consult";
 
 export const DevelopmentPage = () => {
   useDocumentTitle("Qbite | Разработка сайтов и веб-приложений");
@@ -193,10 +194,11 @@ export const DevelopmentPage = () => {
       {/* <Cards state={state.cards} /> */}
       <Calculator scrollToForm={scrollToForm} />
       <Advantages state={state.advantages} />
+      <Consult formRef={formRef} />
       <Warning />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
-      <Feedback state={state.feedback} formRef={formRef} />
+      <Feedback state={state.feedback} />
     </>
   );
 };

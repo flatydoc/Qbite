@@ -109,7 +109,7 @@ export const Feedback = (props) => {
   };
 
   return (
-    <section ref={props.formRef} className={styles.feedback}>
+    <section className={styles.feedback}>
       <h2 className={styles.title}>{props.state.title}</h2>
       <div className={styles.wrapper}>
         <div className={styles.formWrapper}>

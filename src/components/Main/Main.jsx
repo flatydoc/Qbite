@@ -1,4 +1,5 @@
 import { Button } from "../ui/Button/Button";
+import { Scroll } from "../ui/Scroll/Scroll";
 import styles from "./Main.module.scss";
 
 export const Main = ({ state, scrollToForm }) => {
@@ -23,6 +24,7 @@ export const Main = ({ state, scrollToForm }) => {
       </h2>
       <p className={styles.subtitle}>Получите индивидуальное предложение</p>
       <Button type="button" event={scrollToForm} btnText="ОБСУДИТЬ ПРОЕКТ" />
+      <Scroll />
     </section>
   );
 };

@@ -10,6 +10,7 @@ import { useRef } from "react";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 
 import { Calculator } from "../../components/Calculator/Calculator";
+import { Consult } from "../../components/HomePage/Consult/Consult";
 
 export const TargetPage = () => {
   useDocumentTitle("Qbite | Реклама в социальных сетях");
@@ -101,9 +102,10 @@ export const TargetPage = () => {
       <Info state={state.info} />
       <Calculator scrollToForm={scrollToForm} />
       <Advantages state={state.advantages} />
+      <Consult formRef={formRef} />
       <Stages state={state.stages} />
       <Faq questions={state.questions} />
-      <Feedback state={state.feedback} formRef={formRef} />
+      <Feedback state={state.feedback} />
     </>
   );
 };

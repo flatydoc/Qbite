@@ -1,5 +1,6 @@
 import styles from "./Main.module.scss";
 import { Button } from "../../ui/Button/Button";
+import { Scroll } from "../../ui/Scroll/Scroll";
 
 export const Main = ({ scrollToForm, scrollToServices }) => {
   return (
@@ -27,6 +28,7 @@ export const Main = ({ scrollToForm, scrollToServices }) => {
       >
         Enter the web universe
       </p>
+      <Scroll />
     </section>
   );
 };
