@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Qbite/static/css/main.46203e76.css",
-    "main.js": "/Qbite/static/js/main.82bce899.js",
+    "main.css": "/Qbite/static/css/main.d6e245ec.css",
+    "main.js": "/Qbite/static/js/main.bf55349f.js",
     "static/media/stages.jpg": "/Qbite/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/error_page.jpg": "/Qbite/static/media/error_page.eb981f37e407d5a3a24b.jpg",
     "static/media/seo_main.jpg": "/Qbite/static/media/seo_main.130f7cd9e35a210af7dc.jpg",
@@ -37,11 +37,11 @@
     "static/media/slick.woff": "/Qbite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Qbite/index.html",
     "static/media/cross.svg": "/Qbite/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.46203e76.css.map": "/Qbite/static/css/main.46203e76.css.map",
-    "main.82bce899.js.map": "/Qbite/static/js/main.82bce899.js.map"
+    "main.d6e245ec.css.map": "/Qbite/static/css/main.d6e245ec.css.map",
+    "main.bf55349f.js.map": "/Qbite/static/js/main.bf55349f.js.map"
   },
   "entrypoints": [
-    "static/css/main.46203e76.css",
-    "static/js/main.82bce899.js"
+    "static/css/main.d6e245ec.css",
+    "static/js/main.bf55349f.js"
   ]
 }
