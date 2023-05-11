@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Qbite/static/css/main.ecc3aa4d.css",
-    "main.js": "/Qbite/static/js/main.bf55349f.js",
+    "main.css": "/Qbite/static/css/main.d6699440.css",
+    "main.js": "/Qbite/static/js/main.5e7af8f4.js",
     "static/media/stages.jpg": "/Qbite/static/media/stages.6621a8b4e0e3b9bd5e10.jpg",
     "static/media/error_page.jpg": "/Qbite/static/media/error_page.eb981f37e407d5a3a24b.jpg",
     "static/media/seo_main.jpg": "/Qbite/static/media/seo_main.130f7cd9e35a210af7dc.jpg",
-    "static/media/form.jpg": "/Qbite/static/media/form.ce2bebec6b122cca89b9.jpg",
     "static/media/primeicons.svg": "/Qbite/static/media/primeicons.e1441b135b3ca9ad643c.svg",
     "static/media/main.jpg": "/Qbite/static/media/main.b86a9ab9d37a8f490617.jpg",
     "static/media/context_main.webp": "/Qbite/static/media/context_main.9b5a5aa4bfe5fe54ab3e.webp",
     "static/media/target_main.jpg": "/Qbite/static/media/target_main.f3ccb1afe609f4b95519.jpg",
+    "static/media/map.svg": "/Qbite/static/media/map.30570077f7352776c370.svg",
     "static/media/development_main.webp": "/Qbite/static/media/development_main.87e6956b8939a5b74b32.webp",
     "static/media/primeicons.eot": "/Qbite/static/media/primeicons.d44157bdfa026dc877af.eot",
     "static/media/primeicons.woff": "/Qbite/static/media/primeicons.10d3152104f2208ac82a.woff",
@@ -28,7 +28,10 @@
     "static/media/context.svg": "/Qbite/static/media/context.8b7d8376787380a9a7b99d8421fa5600.svg",
     "static/media/warning.svg": "/Qbite/static/media/warning.1020617b6ef59f8bdcad81d83231b285.svg",
     "static/media/graph.svg": "/Qbite/static/media/graph.5237516312a792c9f85f.svg",
+    "static/media/female.svg": "/Qbite/static/media/female.c5faf3eb87c9930a08e0e71688accb95.svg",
     "static/media/bg.svg": "/Qbite/static/media/bg.93ca327d3e712aa418e9.svg",
+    "static/media/mhost.svg": "/Qbite/static/media/mhost.0289e87e30139b5410c5b3395c0fb3ab.svg",
+    "static/media/male.svg": "/Qbite/static/media/male.6204b738bee7790d3d6a41bfc8b0882a.svg",
     "static/media/feedback.svg": "/Qbite/static/media/feedback.fb642b2493151d2df9cd.svg",
     "static/media/logo.svg": "/Qbite/static/media/logo.3524e80c06e609050408f5868ef78982.svg",
     "static/media/slick.svg": "/Qbite/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -37,11 +40,11 @@
     "static/media/slick.woff": "/Qbite/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Qbite/index.html",
     "static/media/cross.svg": "/Qbite/static/media/cross.4aa9c0d367a718b38dbc.svg",
-    "main.ecc3aa4d.css.map": "/Qbite/static/css/main.ecc3aa4d.css.map",
-    "main.bf55349f.js.map": "/Qbite/static/js/main.bf55349f.js.map"
+    "main.d6699440.css.map": "/Qbite/static/css/main.d6699440.css.map",
+    "main.5e7af8f4.js.map": "/Qbite/static/js/main.5e7af8f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecc3aa4d.css",
-    "static/js/main.bf55349f.js"
+    "static/css/main.d6699440.css",
+    "static/js/main.5e7af8f4.js"
   ]
 }
