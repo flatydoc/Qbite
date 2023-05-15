@@ -11,11 +11,7 @@ export const Main = ({ scrollToForm, scrollToServices }) => {
         </p>
         <h1 className={styles.title}>СТУДИЯ ВЕБ-РАЗРАБОТКИ И МАРКЕТИНГА</h1>
         <div className={styles.btnWrapper}>
-          <Button
-            type="button"
-            event={scrollToForm}
-            btnText="ЗАКАЗАТЬ ЗВОНОК"
-          />
+          <Button type="button" event={scrollToForm} btnText="НАЧАТЬ ПРОЕКТ" />
           <button onClick={scrollToServices} className={styles.btn}>
             <p className={styles.btnText}>Наши услуги</p>
             <div className={`${styles.btnIcon} pi pi-arrow-right`}></div>

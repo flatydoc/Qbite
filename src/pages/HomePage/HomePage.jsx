@@ -12,6 +12,7 @@ import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 import { Consult } from "../../components/HomePage/Consult/Consult";
 
 import styles from "./HomePage.module.scss";
+import { Reviews } from "../../components/HomePage/Reviews/Reviews";
 
 export const HomePage = () => {
   useDocumentTitle("Qbite - Студия веб-разработки и маркетинга");
@@ -20,8 +21,41 @@ export const HomePage = () => {
     feedback: {
       title: "Откройте дверь потоку клиентов!",
       subtitle:
-        "Мы готовы предложить лучшие решения для вашего бизнеса. Оставьте свои данные и мы свяжемся с вами!",
+        "Мы поможем вывести Ваш бизнес в интернет. Оставьте свои данные и мы свяжемся с Вами!",
     },
+
+    reviews: [
+      {
+        author: "Игорь Бурцич",
+        stars: 5,
+        sex: "male",
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet eos perferendis excepturi accusamus praesentium atque ea recusandae nobis fuga sequi a alias similique ratione minima, temporibus placeat et nemo? Voluptatem, adipisci aut voluptatum voluptas ratione explicabo laboriosam libero ipsum. Porro nulla debitis placeat aperiam veritatis labore veniam deleniti rerum!",
+      },
+      {
+        author: "Игорина Бурцич",
+        stars: 5,
+        sex: "female",
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet eos perferendis excepturi accusamus praesentium atque ea recusandae nobis fuga sequi a alias similique ratione minima, temporibus placeat et nemo? Voluptatem, adipisci aut voluptatum voluptas ratione explicabo laboriosam libero ipsum. Porro nulla debitis placeat aperiam veritatis labore veniam deleniti rerum!",
+      },
+      {
+        author: "Игорь Бурцич",
+        stars: 5,
+        sex: "male",
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet eos perferendis excepturi accusamus praesentium atque ea recusandae nobis fuga sequi a alias similique ratione minima, temporibus placeat et nemo? Voluptatem, adipisci aut voluptatum voluptas ratione explicabo laboriosam libero ipsum. Porro nulla debitis placeat aperiam veritatis labore veniam deleniti rerum!",
+      },
+      {
+        author: "Игорина Бурцич",
+        stars: 5,
+        sex: "female",
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet eos perferendis excepturi accusamus praesentium atque ea recusandae nobis fuga sequi a alias similique ratione minima, temporibus placeat et nemo? Voluptatem, adipisci aut voluptatum voluptas ratione explicabo laboriosam libero ipsum. Porro nulla debitis placeat aperiam veritatis labore veniam deleniti rerum!",
+      },
+      {
+        author: "Игорь Бурцич",
+        stars: 5,
+        sex: "male",
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio amet eos perferendis excepturi accusamus praesentium atque ea recusandae nobis fuga sequi a alias similique ratione minima, temporibus placeat et nemo? Voluptatem, adipisci aut voluptatum voluptas ratione explicabo laboriosam libero ipsum. Porro nulla debitis placeat aperiam veritatis labore veniam deleniti rerum!",
+      },
+    ],
   };
 
   const servicesRef = useRef();
@@ -45,6 +79,7 @@ export const HomePage = () => {
       <div className={styles.wrapper}>
         <Promotion scrollToForm={scrollToForm} />
         <About />
+        <Reviews state={state.reviews} />
       </div>
       <Feedback state={state.feedback} />
     </>

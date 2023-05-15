@@ -2,6 +2,7 @@ import styles from "./ContactsPage.module.scss";
 import { useDocumentTitle } from "../../core/hooks/useDocumentTitle";
 import { useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { NavLink } from "react-router-dom";
 import { classNames } from "primereact/utils";
 import { Toast } from "primereact/toast";
 import { InputText } from "primereact/inputtext";
@@ -27,6 +28,12 @@ export const ContactsPage = () => {
     }, 1000);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   // let uri = window.location.href.split("?");
   // let utms = uri.filter(() => {
   //   "?";
@@ -40,7 +47,7 @@ export const ContactsPage = () => {
       summary: "Заявка успешна отправлена",
       detail: `Уважаемый ${getValues(
         "name"
-      )}, наш специалист свяжется с вами в ближайшее время`,
+      )}, наш специалист свяжется с Вами в ближайшее время`,
     });
   };
 
@@ -103,153 +110,182 @@ export const ContactsPage = () => {
 
   return (
     <div className={styles.contactsPage}>
-      <div className={styles.contacts}>
-        <ul className={styles.contactsList}>
-          <li className={styles.contactsItem}>
-            <a className={styles.contactsLink} href="tel:+48536065365">
-              <i className={`${styles.contactsItemIcon} pi pi-phone`}></i>
-              <span>+375 (25) 111-11-11</span>
-            </a>
-          </li>
-          <li className={styles.contactsItem}>
-            <a className={styles.contactsLink} href="mailto:flatydoc@gmail.com">
-              <i className={`${styles.contactsItemIcon} pi pi pi-envelope`}></i>
-              <span>example@gmail.com</span>
-            </a>
-          </li>
-          <li className={styles.contactsItem}>
-            <a
-              className={styles.contactsLink}
-              href="https://t.me/quantum_tech_chat"
-            >
-              <i className={`${styles.contactsItemIcon} pi pi-send`}></i>
-              <span>@Qbite</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className={styles.formWrapper}>
-        <h2 className={styles.title}>Откройте дверь потоку клиентов!</h2>
-        <div className={styles.form}>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.flex}>
+      <h2 className={styles.title} style={{ color: "var(--pink)" }}>
+        Мы работаем по всему миру
+      </h2>
+      <div className={styles.wrapper}>
+        <div className={styles.contacts}>
+          <ul className={styles.contactsList}>
+            <li className={styles.contactsItem}>
+              <a className={styles.contactsLink} href="tel:+48536065365">
+                <i className={`${styles.contactsItemIcon} pi pi-phone`}></i>
+                <span>+375 (25) 111-11-11</span>
+              </a>
+            </li>
+            <li className={styles.contactsItem}>
+              <a
+                className={styles.contactsLink}
+                href="mailto:flatydoc@gmail.com"
+              >
+                <i
+                  className={`${styles.contactsItemIcon} pi pi pi-envelope`}
+                ></i>
+                <span>example@gmail.com</span>
+              </a>
+            </li>
+            <li className={styles.contactsItem}>
+              <a
+                className={styles.contactsLink}
+                href="https://t.me/quantum_tech_chat"
+              >
+                <i className={`${styles.contactsItemIcon} pi pi-send`}></i>
+                <span>@Qbite</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.formWrapper}>
+          <h2 className={styles.title}>Откройте дверь потоку клиентов!</h2>
+          <div className={styles.form}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className={styles.flex}>
+                <Controller
+                  name="name"
+                  control={control}
+                  rules={{ required: "Введите Ваше имя" }}
+                  render={({ field, fieldState }) => (
+                    <div className={styles.formItem}>
+                      <label
+                        htmlFor={field.name}
+                        className={classNames({ "p-error": errors.value })}
+                      ></label>
+                      <span className="p-float-label">
+                        <InputText
+                          id={field.name}
+                          value={field.value}
+                          className={classNames(
+                            { "p-invalid": fieldState.error },
+                            styles.input
+                          )}
+                          onChange={(e) => field.onChange(e.target.value)}
+                        />
+                        <label
+                          style={{ color: "#acb4c3" }}
+                          htmlFor={field.name}
+                        >
+                          Имя
+                        </label>
+                      </span>
+                      {getFormErrorMessage(field.name)}
+                    </div>
+                  )}
+                />
+                <Controller
+                  name="phone"
+                  control={control}
+                  rules={{ required: "Введите номер телефона" }}
+                  render={({ field, fieldState }) => (
+                    <div className={styles.formItem}>
+                      <label
+                        htmlFor={field.phone}
+                        className={classNames({ "p-error": errors.value })}
+                      ></label>
+                      <span className="p-float-label">
+                        <InputMask
+                          className={classNames(
+                            { "p-invalid": fieldState.error },
+                            styles.input
+                          )}
+                          onChange={(e) => field.onChange(e.target.value)}
+                          id={field.phone}
+                          value={field.value}
+                          mask="+375 (99) 999-99-99"
+                        />
+                        <label
+                          style={{ color: "#acb4c3" }}
+                          htmlFor={field.phone}
+                        >
+                          Номер телефона
+                        </label>
+                      </span>
+                      {getFormErrorMessage(field.name)}
+                    </div>
+                  )}
+                />
+              </div>
+
               <Controller
-                name="name"
+                name="option"
                 control={control}
-                rules={{ required: "Введите Ваше имя" }}
                 render={({ field, fieldState }) => (
-                  <div className={styles.formItem}>
-                    <label
-                      htmlFor={field.name}
-                      className={classNames({ "p-error": errors.value })}
-                    ></label>
+                  <div
+                    style={{ marginBottom: "36px" }}
+                    className={styles.formItem}
+                  >
                     <span className="p-float-label">
-                      <InputText
-                        id={field.name}
+                      <Dropdown
                         value={field.value}
-                        className={classNames(
-                          { "p-invalid": fieldState.error },
-                          styles.input
-                        )}
-                        onChange={(e) => field.onChange(e.target.value)}
+                        optionLabel="name"
+                        name="option"
+                        id={field.option}
+                        options={options}
+                        control={control}
+                        onChange={(e) => field.onChange(e.value)}
+                        className={styles.input}
                       />
-                      <label style={{ color: "#acb4c3" }} htmlFor={field.name}>
-                        Имя
+                      <label
+                        style={{ color: "#acb4c3" }}
+                        htmlFor={field.option}
+                      >
+                        С чем нужна помощь?
                       </label>
                     </span>
-                    {getFormErrorMessage(field.name)}
                   </div>
                 )}
               />
+
               <Controller
-                name="phone"
+                name="text"
                 control={control}
-                rules={{ required: "Введите номер телефона" }}
                 render={({ field, fieldState }) => (
-                  <div className={styles.formItem}>
-                    <label
-                      htmlFor={field.phone}
-                      className={classNames({ "p-error": errors.value })}
-                    ></label>
+                  <div
+                    style={{ marginBottom: "36px" }}
+                    className={styles.formItem}
+                  >
                     <span className="p-float-label">
-                      <InputMask
-                        className={classNames(
-                          { "p-invalid": fieldState.error },
-                          styles.input
-                        )}
-                        onChange={(e) => field.onChange(e.target.value)}
-                        id={field.phone}
+                      <InputTextarea
+                        className={styles.input}
+                        rows={4}
+                        cols={20}
+                        id={field.text}
                         value={field.value}
-                        mask="+375 (99) 999-99-99"
+                        onChange={(e) => field.onChange(e.target.value)}
                       />
-                      <label style={{ color: "#acb4c3" }} htmlFor={field.phone}>
-                        Номер телефона
+                      <label style={{ color: "#acb4c3" }} htmlFor={field.text}>
+                        Текст сообщения
                       </label>
                     </span>
-                    {getFormErrorMessage(field.name)}
                   </div>
                 )}
               />
-            </div>
 
-            <Controller
-              name="option"
-              control={control}
-              render={({ field, fieldState }) => (
-                <div
-                  style={{ marginBottom: "36px" }}
-                  className={styles.formItem}
-                >
-                  <span className="p-float-label">
-                    <Dropdown
-                      value={field.value}
-                      optionLabel="name"
-                      name="option"
-                      id={field.option}
-                      options={options}
-                      control={control}
-                      onChange={(e) => field.onChange(e.value)}
-                      className={styles.input}
-                    />
-                    <label style={{ color: "#acb4c3" }} htmlFor={field.option}>
-                      С чем нужна помощь?
-                    </label>
-                  </span>
-                </div>
-              )}
-            />
-
-            <Controller
-              name="text"
-              control={control}
-              render={({ field, fieldState }) => (
-                <div
-                  style={{ marginBottom: "36px" }}
-                  className={styles.formItem}
-                >
-                  <span className="p-float-label">
-                    <InputTextarea
-                      className={styles.input}
-                      rows={4}
-                      cols={20}
-                      id={field.text}
-                      value={field.value}
-                      onChange={(e) => field.onChange(e.target.value)}
-                    />
-                    <label style={{ color: "#acb4c3" }} htmlFor={field.text}>
-                      Текст сообщения
-                    </label>
-                  </span>
-                </div>
-              )}
-            />
-
-            <Button
-              isLoading={isLoading}
-              type={"submit"}
-              btnText={"ОТПРАВИТЬ"}
-            />
-          </form>
+              <Button
+                isLoading={isLoading}
+                type={"submit"}
+                btnText={"ОТПРАВИТЬ"}
+              />
+            </form>
+            <p className={styles.notice}>
+              Отправляя заявку, вы соглашаетесь с
+              <NavLink
+                onClick={scrollToTop}
+                className={styles.link}
+                to="/privacy-policy"
+              >
+                <span> Политикой Конфиденциальности</span>
+              </NavLink>
+            </p>
+          </div>
         </div>
       </div>
       <Toast ref={toast} />

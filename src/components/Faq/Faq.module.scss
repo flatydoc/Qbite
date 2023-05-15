@@ -39,7 +39,7 @@
   width: 100%;
 
   background-color: transparent;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 
   text-align: left;
   color: #fff;
@@ -66,6 +66,11 @@
   border-right: 2px solid var(--blue);
   transition: all 0.2s ease-in;
   transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded="true"],
+.accordion__button[aria-selected="true"] {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) inset;
 }
 
 .accordion__button[aria-expanded="true"]::before,

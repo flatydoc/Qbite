@@ -22,7 +22,11 @@ export const Main = ({ state, scrollToForm }) => {
         <br />
         <span className={styles.pink}>ПОД КЛЮЧ</span>
       </h2>
-      <p className={styles.subtitle}>Получите индивидуальное предложение</p>
+      <p className={styles.subtitle}>
+        {state.subtitle
+          ? state.subtitle
+          : "Получите индивидуальное предложение"}
+      </p>
       <Button type="button" event={scrollToForm} btnText="ОБСУДИТЬ ПРОЕКТ" />
       <Scroll />
     </section>

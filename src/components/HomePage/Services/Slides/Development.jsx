@@ -30,9 +30,6 @@ export const Development = () => {
             <span className={styles.blue}> от 900 BYN</span>
           </li>
           <li className={styles.listItem}>
-            Сайт-визитка –<span className={styles.blue}> от 1000 BYN</span>
-          </li>
-          <li className={styles.listItem}>
             Корпоративный сайт –
             <span className={styles.blue}> от 1400 BYN</span>
           </li>
@@ -45,9 +42,9 @@ export const Development = () => {
         </ul>
         <p className={styles.subtitle}>ЧЕМ БУДЕТ ПОЛЕЗЕН ВАШ САЙТ:</p>
         <ul className={styles.list}>
-          <li className={styles.listItem}>Продавать ваши услуги или товар</li>
+          <li className={styles.listItem}>Продавать Ваши услуги или товар</li>
           <li className={styles.listItem}>
-            Информировать или учить вашу аудиторию
+            Информировать или учить Вашу аудиторию
           </li>
           <li className={styles.listItem}>
             Развлекать или решать определенную задачу пользователя по запросу в

@@ -1,16 +1,19 @@
 .numbers {
-  padding: 25px 100px;
+  padding: 50px 100px;
 }
 
 .list {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
 
   list-style: none;
 }
 
 .listItem {
+  margin: 0 auto;
+
   max-width: 200px;
 
   text-align: center;
@@ -32,6 +35,11 @@
   .numbers {
     padding: 25px 50px;
   }
+
+  .list {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 576px) {
@@ -40,8 +48,8 @@
   }
 
   .list {
-    flex-direction: column;
-    align-items: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .listItem {
     max-width: 100%;

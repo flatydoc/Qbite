@@ -38,7 +38,7 @@ export const Feedback = (props) => {
       summary: "Заявка успешна отправлена",
       detail: `Уважаемый ${getValues(
         "name"
-      )}, наш специалист свяжется с вами в ближайшее время`,
+      )}, наш специалист свяжется с Вами в ближайшее время`,
     });
   };
 
@@ -252,7 +252,7 @@ export const Feedback = (props) => {
               />
             </form>
             <p className={styles.notice}>
-              * Отправляя заявку, вы соглашаетесь с
+              Отправляя заявку, вы соглашаетесь с
               <NavLink
                 onClick={scrollToTop}
                 className={styles.link}

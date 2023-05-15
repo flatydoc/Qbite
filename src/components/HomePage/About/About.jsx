@@ -15,7 +15,7 @@ export const About = () => {
           <li className={styles.listItem}>
             Мы <span className={styles.blue}>против шаблонных решений</span>!
             Наша команда заинтересована в создании интересных продуктов, чтобы
-            подчеркнуть индивидуальность вашего бренда.
+            подчеркнуть индивидуальность Вашего бренда.
           </li>
           <li className={styles.listItem}>
             <span className={styles.blue}>Гибкая система оплаты</span> с
@@ -32,7 +32,7 @@ export const About = () => {
             моментально исправим.
           </li>
           <li className={styles.listItem}>
-            Над вашим проектом будут трудиться
+            Над Вашим проектом будут трудиться
             <span className={styles.blue}> опытные разработчики </span> и
             <span className={styles.blue}> эксперты </span>в области маркетинга.
           </li>

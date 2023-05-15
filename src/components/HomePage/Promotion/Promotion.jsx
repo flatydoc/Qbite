@@ -14,6 +14,16 @@ export const Promotion = ({ scrollToForm }) => {
           приносят ожидаемой прибыли? Вы вкладываете деньги, но они даже не
           окупаются?
         </p>
+        <p
+          className={styles.desc}
+          style={{
+            textTransform: "uppercase",
+            color: "var(--blue)",
+            opacity: "0.8",
+          }}
+        >
+          Доверьте свой проект профессионалам!
+        </p>
         <p className={styles.desc}>
           Оставьте заявку, и наш специалист поможет определить проблему
           абсолютно бесплатно.

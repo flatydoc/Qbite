@@ -42,6 +42,11 @@
   &:hover::before {
     width: 100%;
   }
+
+  &:focus {
+    outline: none;
+    transform: scale(105%);
+  }
 }
 
 .btnText {
@@ -66,7 +71,7 @@
 
 .loading {
   opacity: 0.5;
-  cursor: wait;
+  // cursor: wait;
 
   &::before {
     width: 100% !important;

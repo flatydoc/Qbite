@@ -24,10 +24,10 @@ export const Context = () => {
         <p className={styles.subtitle}>ЧТО ВАМ ЭТО ДАЕТ:</p>
         <ul className={styles.list}>
           <li className={styles.listItem}>
-            Многократное увеличение или старт ваших продаж в интернете.
+            Многократное увеличение или старт Ваших продаж в интернете.
           </li>
           <li className={styles.listItem}>
-            Прозрачная математика: мы покажем, сколько заработал каждый ваш
+            Прозрачная математика: мы покажем, сколько заработал каждый Ваш
             рекламный рубль.
           </li>
           <li className={styles.listItem}>

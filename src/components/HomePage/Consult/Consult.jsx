@@ -31,7 +31,7 @@ export const Consult = (props) => {
       summary: "Заявка успешна отправлена",
       detail: `Уважаемый ${getValues(
         "name"
-      )}, наш специалист свяжется с вами в ближайшее время`,
+      )}, наш специалист свяжется с Вами в ближайшее время`,
     });
   };
 
@@ -96,8 +96,8 @@ export const Consult = (props) => {
       <div className={styles.wrapper}>
         <div className={styles.formWrapper}>
           <p className={styles.subtitle}>
-            Мы готовы предложить лучшие решения для вашего бизнеса. Оставьте
-            свои данные и мы свяжемся с вами!
+            Мы готовы предложить лучшие решения для Вашего бизнеса. Оставьте
+            свои данные и мы свяжемся с Вами!
           </p>
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.flex}>
@@ -167,7 +167,7 @@ export const Consult = (props) => {
             />
           </form>
           <p className={styles.notice}>
-            * Отправляя заявку, вы соглашаетесь с
+            Отправляя заявку, вы соглашаетесь с
             <NavLink
               onClick={scrollToTop}
               className={styles.link}

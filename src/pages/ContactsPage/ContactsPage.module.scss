@@ -1,17 +1,18 @@
 .contactsPage {
-  min-height: calc(100vh - 70px);
-
   background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(0, 0, 0, 0.5) 100%
     ),
-    url(../../assets/images/form.jpg);
+    url(../../assets/images/map.svg);
 
   background-size: cover;
-  background-position: center;
-  padding: 100px 70px;
+  background-position-x: center;
 
+  padding: 50px 70px 100px 70px;
+}
+
+.wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -35,7 +36,7 @@
 
   transition: all 0.2s ease;
   &:hover {
-    color: var(--yellow);
+    color: var(--pink);
   }
 }
 
@@ -85,6 +86,11 @@
   }
 }
 
+.notice {
+  margin-top: 15px;
+  font-size: 10px;
+}
+
 .link {
   color: var(--blue);
 
@@ -99,7 +105,10 @@
 @media (max-width: 1024px) {
   .contactsPage {
     padding: 50px;
-    flex-direction: column;
+  }
+
+  .wrapper {
+    flex-direction: column-reverse;
     align-items: center;
   }
 
