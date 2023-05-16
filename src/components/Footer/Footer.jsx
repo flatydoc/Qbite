@@ -59,20 +59,17 @@ export const Footer = () => {
           <div className={styles.contacts}>
             <ul className={styles.contactsList}>
               <li className={styles.contactsItem}>
-                <a className={styles.contactsLink} href="tel:+48536065365">
+                <a className={styles.contactsLink} href="tel:+375255027170">
                   <i className={`${styles.contactsItemIcon} pi pi-phone`}></i>
-                  <span>+375 (25) 111-11-11</span>
+                  <span>+375 (25) 502-71-70</span>
                 </a>
               </li>
               <li className={styles.contactsItem}>
-                <a
-                  className={styles.contactsLink}
-                  href="mailto:flatydoc@gmail.com"
-                >
+                <a className={styles.contactsLink} href="mailto:info@qbite.by">
                   <i
                     className={`${styles.contactsItemIcon} pi pi pi-envelope`}
                   ></i>
-                  <span>example@gmail.com</span>
+                  <span>info@qbite.by</span>
                 </a>
               </li>
             </ul>
@@ -84,7 +81,7 @@ export const Footer = () => {
         <p>
           © 2020
           <NavLink className={styles.link} to="/">
-            <span> Qbite </span>
+            <span> qbite.by </span>
           </NavLink>
           Все права защищены.
         </p>

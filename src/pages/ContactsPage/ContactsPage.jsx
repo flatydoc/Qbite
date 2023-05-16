@@ -34,12 +34,16 @@ export const ContactsPage = () => {
     });
   };
 
-  // let uri = window.location.href.split("?");
-  // let utms = uri.filter(() => {
-  //   "?";
-  // });
+  const getParam = (param) => {
+    const urlParams = new URL(window.location.toString()).searchParams;
+    return urlParams.get(param) || "";
+  };
 
-  let utms = "test";
+  const utm_source = getParam("utm_source");
+  const utm_medium = getParam("utm_medium");
+  const utm_campaign = getParam("utm_campaign");
+  const utm_term = getParam("utm_term");
+  const utm_content = getParam("utm_content");
 
   const showSuccess = () => {
     toast.current.show({
@@ -72,7 +76,11 @@ export const ContactsPage = () => {
     phone: "",
     text: "",
     option: {},
-    utms,
+    utm_source,
+    utm_medium,
+    utm_campaign,
+    utm_term,
+    utm_content,
   };
 
   const {
@@ -117,29 +125,23 @@ export const ContactsPage = () => {
         <div className={styles.contacts}>
           <ul className={styles.contactsList}>
             <li className={styles.contactsItem}>
-              <a className={styles.contactsLink} href="tel:+48536065365">
+              <a className={styles.contactsLink} href="tel:+375255027170">
                 <i className={`${styles.contactsItemIcon} pi pi-phone`}></i>
-                <span>+375 (25) 111-11-11</span>
+                <span>+375 (25) 502-71-70</span>
               </a>
             </li>
             <li className={styles.contactsItem}>
-              <a
-                className={styles.contactsLink}
-                href="mailto:flatydoc@gmail.com"
-              >
+              <a className={styles.contactsLink} href="mailto:info@qbite.by">
                 <i
                   className={`${styles.contactsItemIcon} pi pi pi-envelope`}
                 ></i>
-                <span>example@gmail.com</span>
+                <span>info@qbite.by</span>
               </a>
             </li>
             <li className={styles.contactsItem}>
-              <a
-                className={styles.contactsLink}
-                href="https://t.me/quantum_tech_chat"
-              >
+              <a className={styles.contactsLink} href="https://t.me/info_qbite">
                 <i className={`${styles.contactsItemIcon} pi pi-send`}></i>
-                <span>@Qbite</span>
+                <span>@info_qbite</span>
               </a>
             </li>
           </ul>

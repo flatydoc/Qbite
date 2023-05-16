@@ -79,8 +79,8 @@ export const HomePage = () => {
       <div className={styles.wrapper}>
         <Promotion scrollToForm={scrollToForm} />
         <About />
-        <Reviews state={state.reviews} />
       </div>
+      <Reviews state={state.reviews} />
       <Feedback state={state.feedback} />
     </>
   );

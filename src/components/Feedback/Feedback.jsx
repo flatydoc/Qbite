@@ -25,12 +25,16 @@ export const Feedback = (props) => {
     }, 1000);
   };
 
-  // let uri = window.location.href.split("?");
-  // let utms = uri.filter(() => {
-  //   "?";
-  // });
+  const getParam = (param) => {
+    const urlParams = new URL(window.location.toString()).searchParams;
+    return urlParams.get(param) || "";
+  };
 
-  let utms = "test";
+  const utm_source = getParam("utm_source");
+  const utm_medium = getParam("utm_medium");
+  const utm_campaign = getParam("utm_campaign");
+  const utm_term = getParam("utm_term");
+  const utm_content = getParam("utm_content");
 
   const showSuccess = () => {
     toast.current.show({
@@ -63,7 +67,11 @@ export const Feedback = (props) => {
     phone: "",
     text: "",
     option: {},
-    utms,
+    utm_source,
+    utm_medium,
+    utm_campaign,
+    utm_term,
+    utm_content,
   };
 
   const {

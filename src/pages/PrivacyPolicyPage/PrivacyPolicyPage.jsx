@@ -10,7 +10,7 @@ export const PrivacyPolicyPage = () => {
       <p className={styles.p}>
         Настоящая Политика конфиденциальности персональных данных (далее –
         Политика конфиденциальности) действует в отношении всей информации,
-        которую сайт <span className={styles.blue}>https://test</span> может
+        которую сайт <span className={styles.blue}>https://qbite.by</span> может
         получить о Пользователе во время использования сайта.
       </p>
       <p className={styles.subtitle}>1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</p>
@@ -19,7 +19,8 @@ export const PrivacyPolicyPage = () => {
         термины:
       </p>
       <p className={styles.p}>
-        1.1.1. «Сайт» – сайт <span className={styles.blue}>https://test</span>
+        1.1.1. «Сайт» – сайт{" "}
+        <span className={styles.blue}>https://qbite.by</span>
       </p>
       <p className={styles.p}>
         1.1.2. «Администрация Сайта» – уполномоченные сотрудники по управлению
@@ -385,11 +386,12 @@ export const PrivacyPolicyPage = () => {
       <p className={styles.p}>
         9.3. Все предложения или вопросы по настоящей Политике
         конфиденциальности следует направлять на электронный адрес Администрации
-        Сайта: <span className={styles.blue}>test@test.ru</span>
+        Сайта: <span className={styles.blue}>https://qbite.by</span>
       </p>
       <p className={styles.p}>
         9.4. Действующая Политика конфиденциальности размещена на странице по
-        адресу: <span className={styles.blue}>https://test/privacy-policy</span>
+        адресу:{" "}
+        <span className={styles.blue}>https://qbite.by/privacy-policy</span>
       </p>
     </div>
   );

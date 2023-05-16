@@ -23,8 +23,6 @@ export const Consult = (props) => {
     }, 1000);
   };
 
-  let utms = "test";
-
   const showSuccess = () => {
     toast.current.show({
       severity: "success",
@@ -44,11 +42,26 @@ export const Consult = (props) => {
     });
   };
 
+  const getParam = (param) => {
+    const urlParams = new URL(window.location.toString()).searchParams;
+    return urlParams.get(param) || "";
+  };
+
+  const utm_source = getParam("utm_source");
+  const utm_medium = getParam("utm_medium");
+  const utm_campaign = getParam("utm_campaign");
+  const utm_term = getParam("utm_term");
+  const utm_content = getParam("utm_content");
+
   const defaultValues = {
     name: "",
     phone: "",
 
-    utms,
+    utm_source,
+    utm_medium,
+    utm_campaign,
+    utm_term,
+    utm_content,
   };
 
   const {
