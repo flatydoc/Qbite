@@ -4,7 +4,7 @@ import image from "../../assets/images/warning.svg";
 export const Warning = () => {
   return (
     <section className={styles.warning}>
-      <img alt="Предупреждение" src={image} className={styles.img} />
+      <img alt="#" src={image} className={styles.img} />
       <div className={styles.content}>
         <h4 className={styles.title}>
           Мы <span className={styles.pink}>НЕ</span> сделаем для вас дешевый

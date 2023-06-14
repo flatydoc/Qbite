@@ -17,24 +17,10 @@ export const Seo = () => {
 
   return (
     <div className={styles.slide}>
-      <img className={styles.img} src={image} alt="SEO" />
+      <img className={styles.img} src={image} alt="#" />
 
       <div className={styles.content}>
         <h3 className={styles.title}>SEO-продвижение</h3>
-        <p className={styles.subtitle}>СТОИМОСТЬ SEO-ПРОДВИЖЕНИЯ:</p>
-        <ul className={styles.list}>
-          <li className={styles.listItem}>
-            Комплексное SEO-продвижение –
-            <span className={styles.blue}> от 450 BYN</span>
-          </li>
-          <li className={styles.listItem}>
-            Подготовка под SEO-оптимизацию –
-            <span className={styles.blue}> от 400 BYN</span>
-          </li>
-          <li className={styles.listItem}>
-            SEO-аудит –<span className={styles.blue}> от 300 BYN</span>
-          </li>
-        </ul>
         <p className={styles.subtitle}>ЧТО ТАКОЕ ОПТИМИЗАЦИЯ САЙТА ИЛИ SEO?</p>
         <p className={styles.desc}>
           SEO-продвижение ― это работа над тем, чтобы Ваш сайт показывали Яндекс

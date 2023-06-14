@@ -17,7 +17,7 @@ export const Development = () => {
 
   return (
     <div className={styles.slide}>
-      <img className={styles.img} src={image} alt="Development" />
+      <img className={styles.img} src={image} alt="#" />
 
       <div className={styles.content}>
         <h3 className={styles.title}>Разработка сайтов</h3>

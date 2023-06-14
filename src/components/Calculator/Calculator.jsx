@@ -5,7 +5,7 @@ import { Button } from "../ui/Button/Button";
 export const Calculator = ({ scrollToForm }) => {
   return (
     <section className={styles.calculator}>
-      <img alt="Калькулятор" src={image} className={styles.img} />
+      <img alt="#" src={image} className={styles.img} />
       <div className={styles.content}>
         <h4 className={styles.title}>МЫ ПРОТИВ ОНЛАЙН КАЛЬКУЛЯТОРОВ!</h4>
         <p className={styles.desc}>

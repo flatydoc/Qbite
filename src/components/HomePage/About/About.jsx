@@ -6,7 +6,7 @@ export const About = () => {
     <section className={styles.about}>
       <h2 className={styles.title}>Почему выбирают нас?</h2>
       <div className={styles.wrapper}>
-        <img alt="Почему выбирают нас" src={image} className={styles.img} />
+        <img alt="#" src={image} className={styles.img} />
         <ul className={styles.list}>
           <li className={styles.listItem}>
             Мы - не стартап, а уже

@@ -28,7 +28,7 @@ export const App = () => {
 
   return (
     // <FormContext.Provider>
-    <HashRouter>
+    <BrowserRouter>
       {isLoading ? (
         <div className={styles.loader}>
           <ClipLoader
@@ -54,7 +54,7 @@ export const App = () => {
           </Routes>
         </>
       )}
-    </HashRouter>
+    </BrowserRouter>
     // </FormContext.Provider>
   );
 };

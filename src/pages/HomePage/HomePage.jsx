@@ -80,7 +80,7 @@ export const HomePage = () => {
         <Promotion scrollToForm={scrollToForm} />
         <About />
       </div>
-      <Reviews state={state.reviews} />
+      {/* <Reviews state={state.reviews} /> */}
       <Feedback state={state.feedback} />
     </>
   );

@@ -18,7 +18,7 @@ export const SeoPage = () => {
   const state = {
     main: {
       title: "SEO-продвижение",
-      subtitle: "Верхние строчки поисковых систем могут быть Ваши!",
+      // subtitle: "Верхние строчки поисковых систем могут быть Ваши!",
       image,
     },
 

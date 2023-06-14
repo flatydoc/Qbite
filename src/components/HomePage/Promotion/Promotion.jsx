@@ -30,11 +30,7 @@ export const Promotion = ({ scrollToForm }) => {
         </p>
         <Button type="button" event={scrollToForm} btnText="ОСТАВИТЬ ЗАЯВКУ" />
       </div>
-      <img
-        className={styles.img}
-        src={image}
-        alt="У ВАС ЕСТЬ ЧУВСТВО: “ЧТО-ТО РАБОТАЕТ НЕ ТАК”? - НАЙДЕМ РЕШЕНИЕ!"
-      />
+      <img className={styles.img} src={image} alt="#" />
     </section>
   );
 };

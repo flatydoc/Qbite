@@ -17,7 +17,7 @@ export const Context = () => {
 
   return (
     <div className={styles.slide}>
-      <img className={styles.img} src={image} alt="Context" />
+      <img className={styles.img} src={image} alt="#" />
       <div className={styles.content}>
         <h3 className={styles.title}>Контекстная реклама</h3>
         <p className={`${styles.subtitle} ${styles.blue}`}>ЯНДЕКС, GOOGLE</p>
